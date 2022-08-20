@@ -1,3 +1,54 @@
 body{
-    background-color: bisque;
+    background-color: rgba(223, 220, 212, 0.458);
+}
+
+.ek-home{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.ek-menu{
+    background-color: #741A47;
+    height: 70px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    align-content: center;
+    line-height: 70px;
+}
+
+.ek-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #EFEFEF;
+    flex: 1;
+    height: 100%;
+    padding: 5px;
+}
+.ek-sidebar {
+    flex: 1;
+    background-color: #999999;
+    margin: 10px;
+    font-size: 50px;
+    height: 800px;
+    text-align: center;
+    align-items: center;
+    line-height: 500px;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.ek-dashboard {
+    flex: 5;
+    height: 800px;
+    background-color: #CCCCCC;
+    margin: 10px;
+    font-size: 50px;
+    text-align: center;
+    align-items: center;
+    line-height: 500px;
+    border: 1px solid grey;
+    border-radius: 10px;
 }
