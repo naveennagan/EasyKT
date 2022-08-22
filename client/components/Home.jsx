@@ -3,7 +3,7 @@ import { Menu } from './Menu';
 import { Container } from './Container';
 
 export const Home = ()=>{
-    return (<div class="ek-home">
+    return (<div className="ek-home">
        <Menu />
        <Container />
     </div>)
