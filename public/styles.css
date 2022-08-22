@@ -60,16 +60,17 @@ body{
     border: 1px solid black;
     font-weight: bold;
     cursor: pointer;
+    font-style: italic;
 }
 
 .dashboard-tab:hover {
     box-shadow: 10px 10px 16px #000000;
-    transform: translate3d(0,0,30px);
+    transform: translate3d(0px,-4px,30px);
 }
 
 .tab-selected{
     box-shadow: 10px 10px 16px #000000;
-    transform: translate3d(0px,0px,60px);
+    transform: translate3d(0px,-4px,60px);
 }
 
 .sample-title{
