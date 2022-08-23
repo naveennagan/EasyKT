@@ -1,9 +1,10 @@
 import React from "react";
+import MxGraphGridAreaEditor from "./MxGraphGridEditor";
 
 export const Workflow = ()=>{
     return (
         <div className="workflow-container">
-            <p className="sample-title">Workflow</p>
+            {/* <MxGraphGridAreaEditor /> */}
         </div>
     )
 }

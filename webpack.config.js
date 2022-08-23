@@ -1,22 +1,23 @@
-var path = require('path');
-var webpack = require('webpack');
+var path = require("path");
+var webpack = require("webpack");
 
 module.exports = {
-  entry: './client/index.js',
+  entry: "./src/index.js",
   output: {
-    path: path.join(__dirname, './public/'),
-    filename: 'app.js'
+    path: path.join(__dirname, "./public/"),
+    filename: "app.js",
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: [".js", ".jsx"],
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
-      }
-    ]
-  }
-}
+        loader: "babel-loader",
+      },
+      { test: /\.css$/, use: ["css-loader"] },
+    ],
+  },
+};
