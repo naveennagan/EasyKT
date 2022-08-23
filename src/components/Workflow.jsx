@@ -4,7 +4,7 @@ import MxGraphGridAreaEditor from "./MxGraphGridEditor";
 export const Workflow = ()=>{
     return (
         <div className="workflow-container">
-            {/* <MxGraphGridAreaEditor /> */}
+            <MxGraphGridAreaEditor />
         </div>
     )
 }

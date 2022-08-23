@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import CreateTaskNode from "./CreateTaskNode";
+// import CreateTaskNode from "./CreateTaskNode";
 import "./common.css";
 import "./mxgraph.css";
 import {
@@ -691,14 +691,14 @@ class MxGraphGridAreaEditor extends Component {
           <div className="container" ref="divGraph" />
         </div>
         <div className="changeInput" style={{ zIndex: 10 }} />
-        {this.state.createVisile && (
+        {/* {this.state.createVisile && (
           <CreateTaskNode
             currentTask={this.state.currentTask}
             visible={this.state.createVisile}
             handleCancel={this.handleCancel}
             handleConfirm={this.handleConfirm}
           />
-        )}
+        )} */}
       </div>
     );
   }
