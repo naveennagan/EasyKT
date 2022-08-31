@@ -1,5 +1,117 @@
 .App {
-    font-family: sans-serif;
-    text-align: center;
-  }
-  
+  font-family: sans-serif;
+  text-align: center;
+}
+
+body {
+  background-color: rgba(223, 220, 212, 0.458);
+}
+
+.ek-home {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.ek-menu {
+  background-color: #741a47;
+  height: 70px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  align-content: center;
+  line-height: 70px;
+}
+
+.ek-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #efefef;
+  flex: 1;
+  height: 100%;
+  padding: 5px;
+}
+.ek-sidebar {
+  flex: 1;
+  background-color: #999999;
+  margin: 10px;
+  font-size: 50px;
+  height: 800px;
+  text-align: center;
+  align-items: center;
+  line-height: 500px;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+
+.ek-dashboard {
+  flex: 5;
+  height: 800px;
+  background-color: #cccccc;
+  margin: 10px;
+  font-size: 50px;
+  text-align: center;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+
+.dashboard-tab {
+  background-color: #999999;
+  height: 50px;
+  width: 150px;
+  font-size: 20px;
+  line-height: 40px;
+  border: 1px solid black;
+  font-weight: bold;
+  cursor: pointer;
+  font-style: italic;
+}
+
+.dashboard-tab:hover {
+  box-shadow: 10px 10px 16px #000000;
+  transform: translate3d(0px, -4px, 30px);
+}
+
+.tab-selected {
+  box-shadow: 10px 10px 16px #000000;
+  transform: translate3d(0px, -4px, 60px);
+}
+
+.sample-title {
+  margin: auto;
+}
+
+.dashboard-tab-container {
+  display: flex;
+  flex-direction: row;
+  font-weight: 100;
+  margin: 30px;
+}
+
+.tab-container {
+  margin-top: 20px;
+  height: 678px;
+  padding: 0px 10px;
+}
+
+.workflow-container {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.trigger-container {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.task-container {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}

@@ -93,7 +93,8 @@ class MxGraphGridAreaEditor extends Component {
       dragElt: null,
       createVisile: false,
       currentNode: null,
-      currentTask: ""
+      currentTask: "",
+      toolbar:false
     };
     this.LoadGraph = this.LoadGraph.bind(this);
   }
@@ -101,7 +102,6 @@ class MxGraphGridAreaEditor extends Component {
     this.LoadGraph();
   }
 
-  //  渲染json为graph
   renderJSON = (dataModel, graph) => {
     const jsonEncoder = new JsonCodec();
     let vertices = {};
@@ -310,7 +310,6 @@ class MxGraphGridAreaEditor extends Component {
     graph.setEnabled(true);
     // Enables HTML labels
     graph.setHtmlLabels(true);
-    // 居中缩放
     graph.centerZoom = true;
     // Autosize labels on insert where autosize=1
     graph.autoSizeCellsOnAdd = true;
@@ -516,20 +515,17 @@ class MxGraphGridAreaEditor extends Component {
   initToolbar = () => {
     const that = this;
     const { graph, layout } = this.state;
-    // 放大按钮
     var toolbar = ReactDOM.findDOMNode(this.refs.toolbar);
     toolbar.appendChild(
       mxUtils.button("zoom(+)", function(evt) {
         graph.zoomIn();
       })
     );
-    // 缩小按钮
     toolbar.appendChild(
       mxUtils.button("zoom(-)", function(evt) {
         graph.zoomOut();
       })
     );
-    // 还原按钮
     toolbar.appendChild(
       mxUtils.button("restore", function(evt) {
         graph.zoomActual();
@@ -587,13 +583,14 @@ class MxGraphGridAreaEditor extends Component {
           json: jsonStr
         });
         console.log(jsonStr);
-      })
+      })  
     );
     toolbar.appendChild(
       mxUtils.button("render JSON", function() {
         that.renderJSON(JSON.parse(that.state.json), graph);
       })
     );
+    this.setState({...this.state, toolbar:true});
   };
   LoadGraph(data) {
     var container = ReactDOM.findDOMNode(this.refs.divGraph);
@@ -654,7 +651,7 @@ class MxGraphGridAreaEditor extends Component {
     return (
       <div>
         <ul className="sidebar" ref="mxSidebar">
-          <li className="title" data-title="Task node" data-value="Task node">
+          {/* <li className="title" data-title="Task node" data-value="Task node">
             Task node
           </li>
           <li
@@ -684,7 +681,7 @@ class MxGraphGridAreaEditor extends Component {
           <li className="task" data-title="Shell task" data-value="Shell task">
             Shell task
           </li>
-          <li id="layout123">layout</li>
+          <li id="layout123">layout</li> */}
         </ul>
         <div className="toolbar" ref="toolbar" />
         <div className="container-wrapper">

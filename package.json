@@ -4,10 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode development",
     "start": "react-scripts start",
+    "server-start": "node ./server",
+    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "init": "react-scripts install",
+    "dev": "nodemon ./server",
+    "postinstall": "react-scripts build --output-path dist"
   },
   "repository": {
     "type": "git",
@@ -18,7 +22,6 @@
   "bugs": {
     "url": "https://github.com/naveennagan/EasyKT/issues"
   },
-  "homepage": "https://github.com/naveennagan/EasyKT#readme",
   "dependencies": {
     "@babel/cli": "^7.18.10",
     "@babel/core": "^7.18.10",

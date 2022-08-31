@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/naveennagan/EasyKT/static/css/main.fc527a47.css",
+    "main.js": "/naveennagan/EasyKT/static/js/main.b08145ad.js",
+    "index.html": "/naveennagan/EasyKT/index.html",
+    "main.fc527a47.css.map": "/naveennagan/EasyKT/static/css/main.fc527a47.css.map",
+    "main.b08145ad.js.map": "/naveennagan/EasyKT/static/js/main.b08145ad.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fc527a47.css",
+    "static/js/main.b08145ad.js"
+  ]
+}
