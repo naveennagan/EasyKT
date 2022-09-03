@@ -8,6 +8,7 @@ body{
     margin: 10px;
 }
 
+
 .ek-menu{
     background-color: #741A47;
     height: 70px;
@@ -77,6 +78,13 @@ body{
     margin: auto;
 }
 
+.error-message{
+    color: red;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px;
+}
+
 .dashboard-tab-container{
     display: flex;
     flex-direction: row;
@@ -112,6 +120,26 @@ body{
     display: flex;
 }
 
+.connector-point {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: grey;
+    top: 40%;
+    right: -10px;
+    border: 1px solid white;
+    cursor: all-scroll;
+    visibility: hidden;
+}
+
+.connector-right {
+    right: -10px;
+}
+
+.connector-left {
+    left: -10px;
+}
+
 .sidebar-rectangle{
     width: 100px;
     height: 100px;
@@ -126,6 +154,11 @@ body{
     margin: auto;
     margin: 30px auto;
     cursor: pointer;
+}
+
+.sidebar-rectangle.dropped-shape .connector-point{
+    visibility: visible;
+    display: block;
 }
 
 .sidebar-circle{
@@ -143,6 +176,11 @@ body{
     margin: auto;
     margin: 30px auto;
     cursor: pointer;
+}
+
+.sidebar-circle.dropped-shape .connector-point{
+    visibility: visible;
+    display: block;
 }
 
 .dropped-shape {
