@@ -91,6 +91,7 @@ body{
 }
 
 .workflow-container{
+    position: relative;
     background-color: white;
     height: 100%;
     width: 100%;
@@ -111,3 +112,39 @@ body{
     display: flex;
 }
 
+.sidebar-rectangle{
+    width: 100px;
+    height: 100px;
+    color: black;
+    font-size: 14px;
+    line-height: 100px;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 10px 10px 16px #000000;
+    transform: translate3d(0px,-4px,30px);
+    margin: auto;
+    margin: 30px auto;
+    cursor: pointer;
+}
+
+.sidebar-circle{
+    width: 100px;
+    height: 100px;
+    color: black;
+    font-size: 14px;
+    line-height: 100px;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    box-shadow: 10px 10px 16px #000000;
+    transform: translate3d(0px,-4px,30px);
+    margin: auto;
+    margin: 30px auto;
+    cursor: pointer;
+}
+
+.dropped-shape {
+    position: absolute;
+}
