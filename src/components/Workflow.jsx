@@ -3,6 +3,7 @@ import React, { useState } from "react";
 export const Workflow = ()=>{
 
 
+    
     const [errorMessage, setErrorMessage]= useState("");
 
     const changeIdsRecursively = (elem)=> {
@@ -87,6 +88,29 @@ export const Workflow = ()=>{
     }
 
 
+    var cumulativeOffset = function(element) {
+        var y = 0, x = 0;
+        do {
+            y += element.offsetTop  || 0;
+            x += element.offsetLeft || 0;
+            element = element.offsetParent;
+        } while(element);
+    
+        return {
+           x,
+           y
+        };
+    };
+
+    const angle = (cx, cy, ex, ey) => {
+        var dy = ey - cy;
+        var dx = ex - cx;
+        var theta = Math.atan2(dy, dx); // range (-PI, PI]
+        theta *= 180 / Math.PI; // rads to degs, range (-180, 180]
+        //if (theta < 0) theta = 360 + theta; // range [0, 360)
+        return theta;
+      }
+
     const createArrow = (id1, id2)=>{
         if(!isValidConnection(id1,id2)){
             setErrorMessage(" Please connect properly !");
@@ -95,10 +119,10 @@ export const Workflow = ()=>{
             },5000);
             return;
         }
-        var rect1 = document.getElementById(id1).parentElement.getBoundingClientRect();
+        var rect1 = cumulativeOffset(document.getElementById(id1));
         console.log(rect1);
 
-        var rect2 = document.getElementById(id2).parentElement.getBoundingClientRect();
+        var rect2 = cumulativeOffset(document.getElementById(id2));
         console.log(rect2);
       
 
@@ -106,17 +130,24 @@ export const Workflow = ()=>{
      }
 
     const drawLine = (x1,y1, x2,y2) => {
+
         console.log("Drawing line between ", x1, y1, " to ", x2, y2);
         var div = document.createElement('div');
         div.style.height = "2px";
-        const width = (Math.abs(x1-x2)-60)+"px";
+        
+        const x = Math.abs(x1-x2);
+        const y = Math.abs(y1-y2);
+        const width = Math.sqrt(x*x+y*y);
+
         div.style.width = width;
-        const rotateAngle = Math.atan2(y2-y1,x2-x1);
+
+        const rotateAngle = angle(x2,y2,x1,y1);
         div.style.backgroundColor = "black";
         div.style.position = "fixed";
-        div.style.left = x2+100;
-        div.style.top = y2+50;
-        div.style.transform = `rotate(${rotateAngle}rad)`;
+        div.style.left = x2+5;
+        div.style.top = y2+5;
+        div.style.transform = `rotate(${rotateAngle}deg)`;
+        div.style.transformOrigin = 'left';
         document.getElementById("workflow-container").appendChild(div);
     }
    
