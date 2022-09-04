@@ -148,6 +148,10 @@ export const Workflow = ()=>{
         div.style.top = y2+5;
         div.style.transform = `rotate(${rotateAngle}deg)`;
         div.style.transformOrigin = 'left';
+
+        var connectorArrowTip = document.createElement('div');
+        connectorArrowTip.classList.add('arrow-right');
+        div.appendChild(connectorArrowTip);
         document.getElementById("workflow-container").appendChild(div);
     }
    
