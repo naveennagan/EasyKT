@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { DashBoardTabs } from './DashboardTabs';
+import { SearchBot } from './search-bot/SearchBot';
 import { Task } from './Task';
 import { Trigger } from './Trigger';
 import { Workflow } from './Workflow';
@@ -17,6 +18,9 @@ export const Dashboard = ()=>{
             }
             case "Task":{
                 return <Task />
+            }
+            case "SearchBot":{
+                return <SearchBot />
             }
             default:{
                 return <Workflow />
