@@ -8,6 +8,7 @@ body{
     margin: 10px;
 }
 
+
 .ek-menu{
     background-color: #741A47;
     height: 70px;
@@ -77,6 +78,13 @@ body{
     margin: auto;
 }
 
+.error-message{
+    color: red;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px;
+}
+
 .dashboard-tab-container{
     display: flex;
     flex-direction: row;
@@ -91,6 +99,7 @@ body{
 }
 
 .workflow-container{
+    position: relative;
     background-color: white;
     height: 100%;
     width: 100%;
@@ -111,3 +120,80 @@ body{
     display: flex;
 }
 
+.connector-point {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: grey;
+    top: 40%;
+    right: -10px;
+    border: 1px solid white;
+    cursor: all-scroll;
+    visibility: hidden;
+}
+
+.connector-right {
+    right: -10px;
+}
+
+.connector-left {
+    left: -10px;
+}
+
+.sidebar-rectangle{
+    width: 100px;
+    height: 100px;
+    color: black;
+    font-size: 14px;
+    line-height: 100px;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 10px 10px 16px #000000;
+    transform: translate3d(0px,-4px,30px);
+    margin: auto;
+    margin: 30px auto;
+    cursor: pointer;
+}
+
+.sidebar-rectangle.dropped-shape .connector-point{
+    visibility: visible;
+    display: block;
+}
+
+.sidebar-circle{
+    width: 100px;
+    height: 100px;
+    color: black;
+    font-size: 14px;
+    line-height: 100px;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    box-shadow: 10px 10px 16px #000000;
+    transform: translate3d(0px,-4px,30px);
+    margin: auto;
+    margin: 30px auto;
+    cursor: pointer;
+}
+
+.sidebar-circle.dropped-shape .connector-point{
+    visibility: visible;
+    display: block;
+}
+
+.dropped-shape {
+    position: absolute;
+}
+
+.arrow-right {
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #741A47;
+    position: absolute;
+    bottom: -10;
+    right: -10;
+  }
