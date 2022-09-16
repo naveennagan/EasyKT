@@ -1,9 +1,4 @@
-export const source = _.times(5, () => ({
-  title: faker.company.companyName(),
-  description: faker.company.catchPhrase(),
-  image: faker.internet.avatar(),
-  price: faker.finance.amount(0, 100, 2, "$"),
-}));
+
 
 export const initialState = {
   loading: false,

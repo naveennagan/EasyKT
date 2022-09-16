@@ -1,7 +1,7 @@
 import React from "react";
 import { Search, Grid, Segment, Header } from "semantic-ui-react";
 import "./SearchBot.css";
-import { source, exampleReducer } from "./utils";
+import {  exampleReducer } from "./utils";
 
 export const SearchBot = () => {
   const [state, dispatch] = React.useReducer(exampleReducer, {
@@ -27,7 +27,7 @@ export const SearchBot = () => {
 
       dispatch({
         type: "FINISH_SEARCH",
-        results: _.filter(source, isMatch),
+        results:[],
       });
     }, 300);
   }, []);
@@ -65,7 +65,7 @@ export const SearchBot = () => {
             </pre>
             <Header>Options</Header>
             <pre style={{ overflowX: "auto" }}>
-              {JSON.stringify(source, null, 2)}
+              {JSON.stringify({}, null, 2)}
             </pre>
           </Segment>
         </Grid.Column>
