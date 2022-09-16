@@ -10,7 +10,7 @@ export const SearchBot = () => {
     value: "",
   });
   const { loading, results, value } = state;
-
+  console.log(">>");
   const timeoutRef = React.useRef();
   const handleSearchChange = React.useCallback((e, data) => {
     clearTimeout(timeoutRef.current);
