@@ -11,7 +11,7 @@ export const Rectangle = ()=>{
     <div id="sidebar-rectangle" className='sidebar-rectangle' draggable="true" onDragStart={onDragStart} onClick={(event)=>{
         console.log("Rectangle Clicked ");
     }}>
-       Rectangle
+       Step
        <div className='connector-point connector-left' id="connector-left"></div>
        <div className='connector-point connector-right' 
        connector="true" draggable = "true" id="connector-right"></div>
