@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
+import { ReactDropArea } from 'react-drag-drop-tool';
 import { DashBoardTabs } from './DashboardTabs';
 import { SearchBot } from './search-bot/SearchBot';
 import { Task } from './Task';
 import { Trigger } from './Trigger';
 import { Workflow } from './Workflow';
 
-export const Dashboard = ()=>{
+export const Dashboard = (props)=>{
     const [tab, setTab] = useState("Workflow");
+
+    const { dragDropContext } = props;
 
     const getTabContentView = ()=>{
         switch(tab){
@@ -14,7 +17,9 @@ export const Dashboard = ()=>{
                 return <Workflow />
             }
             case "Trigger":{
-                return <Trigger />
+                return <ReactDropArea dropContext = {dragDropContext} >
+                    <Trigger />
+                </ReactDropArea>
             }
             case "Task":{
                 return <Task />
