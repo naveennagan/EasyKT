@@ -1,10 +1,16 @@
 import React from 'react';
 import { Menu } from './Menu';
 import { Container } from './Container';
+import { createReactDragDropContext  } from 'react-drag-drop-tool';
 
 export const Home = ()=>{
-    return (<div className="ek-home">
+
+    
+    const createDragDropContext = createReactDragDropContext("easy-kt-workflow");
+    
+    return (
+    <div className="ek-home">
        <Menu />
-       <Container />
+       <Container dragDropContext= {createDragDropContext} />
     </div>)
 }
