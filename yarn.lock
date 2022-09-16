@@ -6534,11 +6534,6 @@ multicast-dns@^7.2.5:
     dns-packet "^5.2.2"
     thunky "^1.0.2"
 
-mxgraph-js@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/mxgraph-js/-/mxgraph-js-1.0.1.tgz#21779cb4e35166ed2b24075eaa2d9447990675a3"
-  integrity sha512-lezXs3frMgOn9YXAffGQvxQ93IIYp6NRvIj6GSFRaKZcnnbzau8E1Ma/yywWKZ9mL34vilL1oHa20UzD2OLpzA==
-
 nanoid@^3.3.4:
   version "3.3.4"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.4.tgz#730b67e3cd09e2deacf03c027c81c9d9dbc5e8ab"
