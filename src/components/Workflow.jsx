@@ -92,7 +92,10 @@ export const Workflow = ()=>{
 
     return (
         <div className="workflow-container">
-            {
+             <div className="create-workflow-button">
+                    <span className="create-workflow-icon">&#43;</span>
+            </div>
+            {  
                 workflowList.map((workflowData)=>{
                     return <WorkflowItem workflowData={workflowData}></WorkflowItem>
                 })

@@ -111,6 +111,24 @@ body{
     cursor: pointer;
 }
 
+.create-workflow-button{
+    width: 300px;
+    background-color: paleturquoise;
+    color: black;
+    line-height: 275px;
+    text-align: center;
+    cursor: pointer;
+    height: 300px;
+    margin: 20px;
+    box-shadow: 10px 10px 16px #000000;
+    margin-top: 45px;
+    color: #741A47;
+}
+
+.create-workflow-icon{
+    font-size: 200px;
+}
+
 .workflow-item{
     width: 300px;
     display: flex;
