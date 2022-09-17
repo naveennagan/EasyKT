@@ -1,75 +1,51 @@
-import React from "react";
-import { Search, Grid, Segment, Header } from "semantic-ui-react";
+import React, { useState } from "react";
 import "./SearchBot.css";
-import {  exampleReducer } from "./utils";
 
 export const SearchBot = () => {
-  const [state, dispatch] = React.useReducer(exampleReducer, {
-    loading: false,
-    results: [],
-    value: "",
-  });
-  const { loading, results, value } = state;
-  console.log(">>");
-  const timeoutRef = React.useRef();
-  const handleSearchChange = React.useCallback((e, data) => {
-    clearTimeout(timeoutRef.current);
-    dispatch({ type: "START_SEARCH", query: data.value });
+  const [searchInput, setSearchInput] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+  const [searchTitle, setSearchTitle] = useState("");
 
-    timeoutRef.current = setTimeout(() => {
-      if (data.value.length === 0) {
-        dispatch({ type: "CLEAN_QUERY" });
-        return;
-      }
+  const onInputChange = (e) => {
+    setSearchInput(e.target.value);
+  };
 
-      const re = new RegExp(_.escapeRegExp(data.value), "i");
-      const isMatch = (result) => re.test(result.title);
+  const onEnterPress = (e) => {
+    if (e.key === "Enter") {
+      onSearchClick()
+    }
+  };
 
-      dispatch({
-        type: "FINISH_SEARCH",
-        results:[],
-      });
-    }, 300);
-  }, []);
+  const onSearchClick = () => {
+    setSearchTitle(searchInput);
+    setSearchInput("");
+  };
 
-  React.useEffect(() => {
-    return () => {
-      clearTimeout(timeoutRef.current);
-    };
-  }, []);
+  const onSearchClear = () => {
+    setSearchTitle("");
+    setSearchInput("");
+    setSearchResults([]);
+  };
 
   return (
-    <div className="search-bot">
-      <Grid>
-        <Grid.Column width={6}>
-          <Search
-            loading={loading}
-            placeholder="Search..."
-            onResultSelect={(e, data) =>
-              dispatch({
-                type: "UPDATE_SELECTION",
-                selection: data.result.title,
-              })
-            }
-            onSearchChange={handleSearchChange}
-            results={results}
-            value={value}
-          />
-        </Grid.Column>
-
-        <Grid.Column width={10}>
-          <Segment>
-            <Header>State</Header>
-            <pre style={{ overflowX: "auto" }}>
-              {JSON.stringify({ loading, results, value }, null, 2)}
-            </pre>
-            <Header>Options</Header>
-            <pre style={{ overflowX: "auto" }}>
-              {JSON.stringify({}, null, 2)}
-            </pre>
-          </Segment>
-        </Grid.Column>
-      </Grid>
+    <div className="search-bot row d-flex justify-content-center p-5">
+      <div className="card p-2">
+        <h2 class="card-title">{searchTitle}</h2>
+        <div className="card-body">Search Results will be shown here</div>
+      </div>
+      <div className="m-5 px-5 col">
+        <input
+          className="input-lg search-rounded px-4"
+          type="text"
+          value={searchInput}
+          onChange={onInputChange}
+          onKeyUp={onEnterPress}
+          placeholder="Search for anything..."
+        />
+        <i class="bi bi-search m-5 font-size-large" onClick={onSearchClick}></i>
+        <i class="bi bi-x-lg font-size-large" onClick={onSearchClear}></i>
+      </div>
+      <div class="card text-bg-dark p-2"> Search suggestion will be shown here</div>
     </div>
   );
 };
