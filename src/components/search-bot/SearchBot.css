@@ -11,4 +11,11 @@
   font-size: large;
   width: 50vw;
   border: 2px solid #ccc;
+  color:rgb(1, 126, 184)
+}
+
+.font-size-large{
+  font-size: large;
+  color:rgb(1, 126, 184);
+  cursor: pointer;
 }
