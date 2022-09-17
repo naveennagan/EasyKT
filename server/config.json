@@ -1,0 +1,5 @@
+{
+    "dbUrl":"mongodb+srv://abhishek:abhi%40easykt@cluster0.qk9c9ez.mongodb.net/EasyKT?retryWrites=true&w=majority",
+    "dbName" : "EasyKT",
+    "secretKey": "secret.secret"
+}
