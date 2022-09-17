@@ -102,9 +102,77 @@ body{
     position: relative;
     background-color: white;
     height: 100%;
-    width: 100%;
+    width: 200p;
     display: flex;
+    flex-direction: row;
+    margin: 40px;
+    flex-flow: wrap;
+    overflow: scroll;
+    cursor: pointer;
 }
+
+.workflow-item{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 10px 16px #000000;
+    margin: 10px;
+    background-color: rosybrown;
+    height: fit-content;
+}
+
+.workflow-item-title{
+    text-align: center;
+    font-size: 20px;
+    padding: 5px;
+    font-weight: bold;
+    margin: 10px;
+    background-color: darkslategray;
+    color: white;
+    border: 1px solid palevioletred;
+}
+
+.workflow-item-details{
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+}
+
+.workflow-item-image{
+    position: relative;
+}
+
+.workflow-step-details{
+    text-align: center;
+    height: 100px;
+    background-color: indigo;
+    color: white;
+}
+
+.workflow-step{
+    text-align: center;
+    font-size: 14px;
+    padding: 5px;
+    font-weight: bold;
+    margin: 10px;
+    background-color: hotpink;
+    color: white;
+    border: 1px solid peachpuff;
+}
+
+.workflow-author{
+    text-align: center;
+    font-size: 14px;
+    padding: 5px;
+    font-weight: bold;
+    margin: 10px;
+    background-color: hotpink;
+    color: white;
+    border: 1px solid peachpuff;
+}
+
+
+
 
 .trigger-container{
     background-color: white;
@@ -197,3 +265,4 @@ body{
     bottom: -10;
     right: -10;
   }
+  
