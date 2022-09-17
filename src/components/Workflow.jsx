@@ -17,11 +17,13 @@ export const Workflow = (props)=>{
            steps: [
                {
                    id: "step1",
-                   name: "Review Documents"
+                   name: "Review Documents",
+                   type: "Text"
                },
                {
                 id: "step2",
-                name: "Sign Documents"
+                name: "Sign Documents",
+                type: "Video"
             }
            ]
        },
@@ -32,11 +34,13 @@ export const Workflow = (props)=>{
         steps: [
             {
                 id: "step1",
-                name: "Review Documents"
+                name: "Review Documents",
+                type: "Text"
             },
             {
              id: "step2",
-             name: "Sign Documents"
+             name: "Sign Documents",
+             type: "Text"
          }
         ]
        },
@@ -47,7 +51,8 @@ export const Workflow = (props)=>{
         steps: [
             {
                 id: "step1",
-                name: "Review Documents"
+                name: "Review Documents",
+                type: "Text"
             },
            
         ]
@@ -59,15 +64,18 @@ export const Workflow = (props)=>{
         steps: [
             {
                 id: "step1",
-                name: "Review Documents"
+                name: "Review Documents",
+                type: "Text"
             },
             {
              id: "step2",
-             name: "Sign Documents"
+             name: "Sign Documents",
+             type: "Quiz"
          },
          {
             id: "step3",
-            name: "Sign Documents"
+            name: "Sign Documents",
+            type: "Text"
         }
         ]
     },
@@ -78,19 +86,23 @@ export const Workflow = (props)=>{
         steps: [
             {
                 id: "step1",
-                name: "Review Documents"
+                name: "Review Documents",
+                type: "Text"
             },
             {
              id: "step2",
-             name: "Sign Documents"
+             name: "Sign Documents",
+             type: "Image"
          },
          {
             id: "step3",
-            name: "Sign Documents"
+            name: "Sign Documents",
+            type: "Text"
         },
         {
             id: "step4",
-            name: "Sign Documents"
+            name: "Sign Documents",
+            type: "Text"
         }
         ]
     }
