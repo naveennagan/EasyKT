@@ -14,7 +14,7 @@ export const Dashboard = (props)=>{
     const getTabContentView = ()=>{
         switch(tab){
             case "Workflow":{
-                return <Workflow />
+                return <Workflow dragDropContext = {dragDropContext}/>
             }
             case "Trigger":{
                 return <ReactDropArea dropContext = {dragDropContext} >
@@ -28,7 +28,7 @@ export const Dashboard = (props)=>{
                 return <SearchBot />
             }
             default:{
-                return <Workflow />
+                return <Workflow dragDropContext = {dragDropContext} />
             }
         }
     }
