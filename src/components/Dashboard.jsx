@@ -17,9 +17,7 @@ export const Dashboard = (props)=>{
                 return <Workflow dragDropContext = {dragDropContext}/>
             }
             case "Trigger":{
-                return <ReactDropArea dropContext = {dragDropContext} >
-                    <Trigger />
-                </ReactDropArea>
+                return <Trigger />
             }
             case "Task":{
                 return <Task />

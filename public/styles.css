@@ -289,6 +289,163 @@ body{
     position: relative;
 }
 
+.task-table{
+    width: 100%;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid olive;
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: column;
+}
+
+.task-header{
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: powderblue;
+    border: 1px solid rebeccapurple;
+    color: black;
+    padding: 10px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.task-header-title{
+    padding: 2px;
+    font-size: 20px;
+    min-width: 200px;
+    margin: auto;
+}
+
+.task-row{
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: bisque;
+    border: 1px solid rebeccapurple;
+    color: black;
+    padding: 10px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.task-row-title{
+    padding: 2px;
+    font-size: 14px;
+    min-width: 200px;
+    margin: auto;
+}
+
+.task-completed{
+    color: green;
+}
+
+.task-progress{
+    color: orangered;
+}
+
+
+.task-row-action{
+    color: white;
+    width: 100px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #999999;
+    padding: 10px;
+    box-shadow: 10px 10px 16px #000000;
+}
+
+.task-row-action:hover{
+    color: white;
+    width: 100px;
+    cursor: pointer;
+    background-color: #999999;
+    padding: 10px;
+    transform: translate3d(0px,-4px,30px);
+}
+
+
+.trigger-table{
+    width: 100%;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid honeydew;
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: column;
+}
+
+.trigger-header{
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: khaki;
+    border: 1px solid darkcyan;
+    color: black;
+    padding: 10px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.trigger-header-title{
+    padding: 2px;
+    font-size: 20px;
+    min-width: 200px;
+    margin: auto;
+}
+
+.trigger-row{
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: paleturquoise;
+    border: 1px solid rebeccapurple;
+    color: black;
+    padding: 10px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.trigger-row-title{
+    padding: 2px;
+    font-size: 14px;
+    min-width: 200px;
+    margin: auto;
+}
+
+.trigger-completed{
+    color: green;
+}
+
+.trigger-progress{
+    color: orangered;
+}
+
+
+.trigger-row-action{
+    color: white;
+    width: 100px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #999999;
+    padding: 10px;
+    box-shadow: 10px 10px 16px #000000;
+}
+
+.trigger-row-action:hover{
+    color: white;
+    width: 100px;
+    cursor: pointer;
+    background-color: #999999;
+    padding: 10px;
+    transform: translate3d(0px,-4px,30px);
+}
+
 .dropped-shape {
     position: absolute;
 }
