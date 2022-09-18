@@ -282,7 +282,7 @@ body{
 }
 
 .close-workflow:hover {
-    transform: scale(1.2) translate3d(0px,-4px,30px);
+    transform: scale(1.1) translate3d(0px,-4px,30px);
 }   
 
 
