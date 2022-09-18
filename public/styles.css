@@ -281,6 +281,11 @@ body{
     font-size: 20px;
 }
 
+.close-workflow:hover {
+    transform: scale(1.5) translate3d(0px,-4px,30px);
+}   
+
+
 .create-workflow-container{
     background-color: white;
     height: 100%;
