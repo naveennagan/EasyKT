@@ -1,9 +1,10 @@
-import React from 'react';
-import { Home } from './Home';
+import React from "react";
+import { Home } from "./Home";
 
-export const EasyKT = ()=>{
-
-    return (<div>
-        <Home />
-    </div>)
-}
+export const EasyKT = () => {
+  return (
+    <div>
+      <Home />
+    </div>
+  );
+};
