@@ -4,12 +4,14 @@ const path = require('path');
 const Cors = require('cors')
 const bodyParser = require('body-parser');
 const { createWorkflow, getWorkflow, addSearchItem } = require('./controller');
+const { errorHandler } = require('./utils/errorHandler');
 
 const app = new express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(Cors());
+app.use(errorHandler)
 
 app.use(express.static(path.join(__dirname, '../public/')));
 
