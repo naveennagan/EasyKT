@@ -9,7 +9,7 @@ export const Rectangle = () => {
   };
 
   return (
-    <div className="col-md-6 iconCss">
+    <div className="col-md-6 iconCss m-4">
       <IoTextOutline
         value={{ color: "green", size: "100em" }}
         id="sidebar-rectangle"
