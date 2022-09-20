@@ -466,3 +466,35 @@ body{
     right: -10;
   }
   
+
+ .left-connector {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: -10px;
+    top: 40px;
+    visibility: visible;
+    background-color: grey;
+    border-radius: 10px;
+    border: 1px solid black;
+  }
+
+  .right-connector {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: -10px;
+    top: 40px;
+    visibility: visible;
+    background-color: grey;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.ek-sidebar .left-connector{
+    visibility: hidden;
+}
+
+.ek-sidebar .right-connector{
+    visibility: hidden;
+}
