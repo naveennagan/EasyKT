@@ -67,15 +67,15 @@ body {
 }
 
 .dashboard-tab {
-  background-color: #aa0000;
-  background-image: linear-gradient(
+  background-color:  rgb(211, 211, 215);
+  /* background-image: linear-gradient(
     to right,
     rgb(238, 238, 255),
     white,
     white,
     white,
     rgb(238, 238, 255)
-  );
+  ); */
   height: 50px;
   width: 150px;
   font-size: 20px;
