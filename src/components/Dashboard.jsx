@@ -20,7 +20,7 @@ export const Dashboard = (props)=>{
                 return <Trigger />
             }
             case "Task":{
-                return <Task />
+                return <Task/>
             }
             case "SearchBot":{
                 return <SearchBot />
@@ -36,10 +36,12 @@ export const Dashboard = (props)=>{
     }
 
     return (
-    <div className='ek-dashboard'>
+    <div >
+        <div className='ek-dashboard'>
        <DashBoardTabs onTabSelect ={selectTab} tab={tab} />
        <div className='tab-container'>
             {getTabContentView()}
+       </div>
        </div>
     </div>
     )
