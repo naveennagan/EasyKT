@@ -1,11 +1,25 @@
 import React, { useEffect, useState } from "react";
-import Modal from "react-modal";
+import { workflowData } from "../../data/workflowData";
+import { Pill } from "./Pill";
 import "./SearchBot.css";
 
 export const SearchBot = () => {
   const [searchInput, setSearchInput] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [searchTitle, setSearchTitle] = useState("");
+  const [suggestions, setSuggestions] = useState(null);
+
+  useEffect(() => updateSuggestions(), [searchInput]);
+
+  const updateSuggestions = () => {
+    const results = workflowData.reduce((acc, workflow) => {
+      if (workflow.name.toLowerCase().includes(searchInput.toLowerCase())) {
+        acc.push(workflow.name);
+      }
+      return acc;
+    }, []);
+    setSuggestions(results);
+  };
 
   const onInputChange = (e) => {
     setSearchInput(e.target.value);
@@ -50,40 +64,17 @@ export const SearchBot = () => {
           ></i>
           <i className="bi bi-x-lg font-size-large" onClick={onSearchClear}></i>
         </div>
-        <div className="card text-bg-dark p-2">
-          Search suggestion will be shown here
+        <div className="text-bg-dark p-2">
+          {suggestions?.map((suggestion, index) => (
+            <Pill
+              text={suggestion}
+              onClick={()=>setSearchInput(suggestion)}
+              key={index}
+            />
+          )) || <> Search suggestion will be shown here</>}
         </div>
       </div>
     </>
   );
 };
 
-const Modalo = () => {
-  return (
-    <Modal
-      isOpen={true}
-      // onHide={() => {
-      //   return;
-      // }}
-      style={{
-        content: {
-          top: '50%',
-          left: '50%',
-          right: 'auto',
-          bottom: 'auto',
-          marginRight: '-50%',
-          transform: 'translate(-50%, -50%)',
-        },
-      }}
-    >
-      <div>I am a modal</div>
-      <form>
-        <input />
-        <button>tab navigation</button>
-        <button>stays</button>
-        <button>inside</button>
-        <button>the modal</button>
-      </form>
-    </Modal>
-  );
-};
