@@ -7,6 +7,7 @@ import { Circle3 } from "./SideBarIcons/Circle copy 3";
 import { Circle4 } from "./SideBarIcons/Circle copy 4";
 import { Circle5 } from "./SideBarIcons/Circle copy 5";
 import { Circle6 } from "./SideBarIcons/Circle copy 6";
+import { Circle7 } from "./SideBarIcons/Circle copy 7";
 
 import { Rectangle } from "./SideBarIcons/Rectangle";
 import { TextItem } from "./SideBarIcons/TextItem";
@@ -40,7 +41,9 @@ export const Sidebar = (props) => {
       <ReactDraggable targetContext={dragDropContext}>
         <Circle6 />
       </ReactDraggable>
-     
+      <ReactDraggable targetContext={dragDropContext}>
+        <Circle7 />
+      </ReactDraggable>
 
       {/* <ReactDraggable targetContext={dragDropContext}>
         <TextItem />

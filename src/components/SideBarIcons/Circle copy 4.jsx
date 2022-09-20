@@ -1,6 +1,6 @@
 import React from "react";
 import { IconContext } from "react-icons";
-import { FcApproval } from "react-icons/fc";
+import { MdApproval } from "react-icons/md";
 
 export const Circle4 = () => {
   const onDragStart = (event) => {
@@ -15,7 +15,7 @@ export const Circle4 = () => {
     //    connector="true" draggable = "true" id="connector-right"></div>
     // </div>
     <div className="col-md-6 iconCss">
-      <FcApproval
+      <MdApproval
         value={{ color: "green", size: "100em" }}
         id="sidebar-rectangle"
         draggable="true"
@@ -35,7 +35,7 @@ export const Circle4 = () => {
           draggable="true"
           id="connector-right"
         ></div>
-      </FcApproval>
+      </MdApproval>
       <div className="iconLabel">Approval</div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import { IconContext } from "react-icons";
-import { FcWikipedia } from "react-icons/fc";
+import { ImWikipedia } from "react-icons/im";
 
 export const Circle6 = () => {
   const onDragStart = (event) => {
@@ -15,7 +15,7 @@ export const Circle6 = () => {
     //    connector="true" draggable = "true" id="connector-right"></div>
     // </div>
     <div className="col-md-6 iconCss">
-      <FcWikipedia
+      <ImWikipedia
         value={{ color: "green", size: "100em" }}
         id="sidebar-rectangle"
         draggable="true"
@@ -35,7 +35,7 @@ export const Circle6 = () => {
           draggable="true"
           id="connector-right"
         ></div>
-      </FcWikipedia>
+      </ImWikipedia>
       <div className="iconLabel">Wiki</div>
     </div>
   );
