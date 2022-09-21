@@ -18,7 +18,7 @@ export const TextItem = (props)=>{
             </ReactConnectorStart>
             
             
-            <ReactConnectorEnd connectorContext={connectorContext} uniqueid = { uniqueid } >
+            <ReactConnectorEnd selector="create-workflow" connectorContext={connectorContext} uniqueid = { uniqueid } >
                 <div className='left-connector' />
             </ReactConnectorEnd>
         </div>
