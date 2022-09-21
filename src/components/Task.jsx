@@ -48,7 +48,7 @@ export const Task = ()=>{
             </div>
         </div>
         {show && 
-             <CustomModal>
+             <CustomModal style={{content:{ inset: '100px', padding: '0px' }}}>
                <TaskPreview task={selectedTask} setShow={setShow} /> 
              </CustomModal>}
         </>

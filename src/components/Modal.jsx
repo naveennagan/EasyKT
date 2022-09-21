@@ -1,13 +1,12 @@
 import React from 'react'
 import Modal from "react-modal";
 
-const CustomModal = ({children}) => {
+const CustomModal = ({children, style}) => {
 
     return (
         <Modal
           isOpen={true}
-          style={
-            {content:{ inset: '100px' }}}
+          style={style}
         >
           {children}
         </Modal> 

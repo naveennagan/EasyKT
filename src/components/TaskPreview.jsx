@@ -55,8 +55,8 @@ const TaskPreview = ({task, setShow}) => {
         <>
         <div className='preview-container'>
             <i className="bi bi-x-lg preview-close-button" onClick={() => setShow(false)}></i>
-            <div className='preview-title'>
-               <div>{selectedStep.title}</div>
+            <div className='preview-title-container'>
+               <div className='preview-title'>{selectedStep.title}</div>
             </div>
             <div className='preview-content'>
             <div>{selectedStep.description}</div>
