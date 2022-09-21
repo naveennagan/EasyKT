@@ -95,7 +95,7 @@ body {
   background: rgb(255, 255, 255);
   background: rgb(255, 255, 255);
   background: rgb(255, 255, 255);
-  background: linear-gradient(
+  background-image: linear-gradient(
     180deg,
     rgba(255, 255, 255, 1) 0%,
     rgba(245, 245, 245, 1) 74%,
@@ -103,6 +103,26 @@ body {
     rgb(210, 208, 208) 87%,
     rgb(176, 175, 175) 92%,
     /* rgb(162, 162, 162) 96% */
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(248, 248, 248, 1) 60%,
+    rgba(248, 248, 248, 1) 63%,
+    rgba(248, 248, 248, 1) 66%,
+    rgba(248, 248, 248, 1) 69%,
+    rgba(248, 248, 248, 1) 72%,
+    rgba(246, 246, 246, 1) 74%,
+    rgba(246, 246, 246, 1) 80%,
+    rgba(246, 246, 246, 1) 86%,
+    rgba(247, 247, 247, 1) 89%,
+    rgba(248, 248, 248, 1) 91%,
+    rgba(249, 249, 249, 1) 94%,
+    rgba(245, 245, 245, 1) 96%,
+    rgba(234, 234, 234, 1) 100%,
+    rgba(224, 224, 224, 1) 100%,
+    rgba(182, 182, 182, 1) 100%,
+    rgba(143, 143, 143, 1) 100%
   );
 
   height: 40px;
@@ -395,9 +415,9 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: 7B83EB;
-  border: 1px solid 464EB8;
-  color: black;
+  background-color: 464EB8;
+  border: 1px solid #c6c5c5;
+  color: white;
   padding: 10px;
   /* font-weight: bold; */
   margin: 10px;
@@ -415,12 +435,32 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: bisque;
-  border: 1px solid 464EB8;
+  background-color: 7B83EB;
+  border: 1px solid #cccaca;
   color: black;
   padding: 10px;
   /* font-weight: bold; */
   margin: 10px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(248, 248, 248, 1) 60%,
+    rgba(248, 248, 248, 1) 63%,
+    rgba(248, 248, 248, 1) 66%,
+    rgba(248, 248, 248, 1) 69%,
+    rgba(248, 248, 248, 1) 72%,
+    rgba(246, 246, 246, 1) 74%,
+    rgba(246, 246, 246, 1) 80%,
+    rgba(246, 246, 246, 1) 86%,
+    rgba(247, 247, 247, 1) 89%,
+    rgba(248, 248, 248, 1) 91%,
+    rgba(249, 249, 249, 1) 94%,
+    rgba(245, 245, 245, 1) 96%,
+    rgba(234, 234, 234, 1) 100%,
+    rgba(224, 224, 224, 1) 100%,
+    rgba(182, 182, 182, 1) 100%,
+    rgba(143, 143, 143, 1) 100%
+  );
 }
 
 .task-row-title {
@@ -439,11 +479,21 @@ body {
 }
 
 .task-row-action {
-  color: white;
+  color: #2c2c2c;
   width: 100px;
   cursor: pointer;
   text-align: center;
-  background-color: #bab8b8;
+  background-color: #edecec;
+  padding: 10px;
+  box-shadow: 1px 1px 4px #000000;
+}
+
+.trigger-row-action {
+  color: #2c2c2c;
+  width: 100px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #edecec;
   padding: 10px;
   box-shadow: 1px 1px 4px #000000;
 }
@@ -461,8 +511,8 @@ body {
   width: 100%;
   padding: 5px;
   margin: 10px;
-  border: 1px solid honeydew;
-  background-color: gainsboro;
+  border: 1px solid lightgrey;
+  background-color: #edeaea;
   display: flex;
   flex-direction: column;
 }
@@ -472,9 +522,9 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: khaki;
-  border: 1px solid 7B83EB;
-  color: black;
+  background-color: 464EB8;
+  border: 1px solid #c6c5c5;
+  color: white;
   padding: 10px;
   /* font-weight: bold; */
   margin: 10px;
@@ -493,11 +543,31 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
   background-color: 7B83EB;
-  border: 1px solid 464EB8;
+  border: 1px solid #cccaca;
   color: black;
   padding: 10px;
   /* font-weight: bold; */
   margin: 10px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(248, 248, 248, 1) 60%,
+    rgba(248, 248, 248, 1) 63%,
+    rgba(248, 248, 248, 1) 66%,
+    rgba(248, 248, 248, 1) 69%,
+    rgba(248, 248, 248, 1) 72%,
+    rgba(246, 246, 246, 1) 74%,
+    rgba(246, 246, 246, 1) 80%,
+    rgba(246, 246, 246, 1) 86%,
+    rgba(247, 247, 247, 1) 89%,
+    rgba(248, 248, 248, 1) 91%,
+    rgba(249, 249, 249, 1) 94%,
+    rgba(245, 245, 245, 1) 96%,
+    rgba(234, 234, 234, 1) 100%,
+    rgba(224, 224, 224, 1) 100%,
+    rgba(182, 182, 182, 1) 100%,
+    rgba(143, 143, 143, 1) 100%
+  );
 }
 
 .trigger-row-title {
@@ -516,11 +586,11 @@ body {
 }
 
 .trigger-row-action {
-  color: white;
+  color: #2c2c2c;
   width: 100px;
   cursor: pointer;
   text-align: center;
-  background-color: #c6c6c6;
+  background-color: #edecec;
   padding: 10px;
   box-shadow: 1px 1px 4px #000000;
 }
@@ -585,62 +655,62 @@ body {
     padding: 20px;
 }
 .preview-title-container {
-    line-height: 40px;
-    margin-top: 30px; 
+  line-height: 40px;
+  margin-top: 30px;
 }
 .preview-title {
   font-size: 20px;
-  color: #464EB8;
-  border-bottom: 1px solid #464EB8;
+  color: #464eb8;
+  border-bottom: 1px solid #464eb8;
   font-weight: 600;
 }
 .preview-content {
-    font-size: 14px;
-    margin-top: 20px;
-    margin-bottom: 80px;
-    overflow: scroll;
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 80px;
+  overflow: scroll;
 }
 .preview-footer {
-    font-size: 40px;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+  font-size: 40px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .preview-footer-buttons {
-    margin-left: 10px;
-    margin-right: 10px;
-    color: #464EB8;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #464eb8;
 }
 .preview-close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 30px;
-    cursor: pointer;
-    color: #464EB8;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #464eb8;
 }
 .preview-help-view {
-    position: absolute;
-    background-color: #464EB8;
-    border-radius: 4px;
-    width: 300px;
-    padding: 10px;
-    bottom: 70px;
-    left: 50%;
-    font-size: 16px;
-    transform: translateX(-50%);
-    color: #fff;
+  position: absolute;
+  background-color: #464eb8;
+  border-radius: 4px;
+  width: 300px;
+  padding: 10px;
+  bottom: 70px;
+  left: 50%;
+  font-size: 16px;
+  transform: translateX(-50%);
+  color: #fff;
 }
 .preview-help-button {
-    background-color: oldlace;
-    color: #464EB8;
-    border: none;
+  background-color: oldlace;
+  color: #464eb8;
+  border: none;
 }
 .preview-help-button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .right-connector {

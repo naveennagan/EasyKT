@@ -1,4 +1,3 @@
-// const elasticClient = require("../utils/elasticClient");
 const { elasticClient } = require("../utils/elasticClient");
 const { getDB } = require("../utils/mongoClient");
 
@@ -25,7 +24,7 @@ exports.getWorkflow = async (req, res) => {
   res.status(200).json(results);
 };
 
-exports.addSearchItem = async (req, res) => {
+exports.addWorkflow = async (req, res) => {
   const { index, document } = req.body;
   const result = await elasticClient.index({
     index,
@@ -33,4 +32,18 @@ exports.addSearchItem = async (req, res) => {
   });
   res.status(200).json({ data: result });
   client.indices.refresh({ index });
+};
+
+exports.searchWorkflow = async (req, res) => {
+  const { name, index } = req.query;
+  console.log({ name: decodeURIComponent(name), index });
+  const result = await elasticClient.search({
+    index,
+    query: {
+      multi_match: {
+        query: decodeURIComponent(name),
+      },
+    },
+  });
+  res.status(200).json({ data: result?.hits?.hits });
 };
