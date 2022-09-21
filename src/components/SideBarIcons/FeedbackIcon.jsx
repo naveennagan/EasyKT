@@ -1,8 +1,8 @@
 import React from "react";
 import { IconContext } from "react-icons";
-import { MdApproval } from "react-icons/md";
+import { RiFeedbackFill } from "react-icons/ri";
 
-export const Circle4 = () => {
+export const Feedback = () => {
   const onDragStart = (event) => {
     event.dataTransfer.setData("text", event.target.id);
   };
@@ -15,7 +15,7 @@ export const Circle4 = () => {
     //    connector="true" draggable = "true" id="connector-right"></div>
     // </div>
     <div className="col-md-6 iconCss">
-      <MdApproval
+      <RiFeedbackFill
         value={{ color: "green", size: "100em" }}
         id="sidebar-rectangle"
         draggable="true"
@@ -35,8 +35,8 @@ export const Circle4 = () => {
           draggable="true"
           id="connector-right"
         ></div>
-      </MdApproval>
-      <div className="iconLabel">Approval</div>
+      </RiFeedbackFill>
+      <div className="iconLabel">Feedback</div>
     </div>
   );
 };

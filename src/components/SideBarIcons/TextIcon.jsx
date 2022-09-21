@@ -3,7 +3,7 @@ import { IconContext } from "react-icons";
 import { FcHeadset } from "react-icons/fc";
 import { IoTextOutline } from "react-icons/io5";
 
-export const Rectangle = () => {
+export const Text = () => {
   const onDragStart = (event) => {
     event.dataTransfer.setData("text", event.target.id);
   };

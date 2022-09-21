@@ -1,8 +1,8 @@
 import React from "react";
 import { IconContext } from "react-icons";
-import { BiUserVoice } from "react-icons/bi";
+import { BsImage } from "react-icons/bs";
 
-export const Circle7 = () => {
+export const Image = () => {
   const onDragStart = (event) => {
     event.dataTransfer.setData("text", event.target.id);
   };
@@ -15,7 +15,7 @@ export const Circle7 = () => {
     //    connector="true" draggable = "true" id="connector-right"></div>
     // </div>
     <div className="col-md-6 iconCss">
-      <BiUserVoice
+      <BsImage
         value={{ color: "green", size: "100em" }}
         id="sidebar-rectangle"
         draggable="true"
@@ -35,8 +35,8 @@ export const Circle7 = () => {
           draggable="true"
           id="connector-right"
         ></div>
-      </BiUserVoice>
-      <div className="iconLabel">Voice</div>
+      </BsImage>
+      <div className="iconLabel">Image</div>
     </div>
   );
 };
