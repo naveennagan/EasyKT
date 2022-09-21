@@ -568,10 +568,10 @@ body {
     width: 20px;
     height: 20px;
     position: absolute;
-    left: -10px;
-    top: 40px;
+    left: -20px;
+    top: 43px;
     visibility: visible;
-    background-color: grey;
+    background-color: royalblue;
     border-radius: 10px;
     border: 1px solid black;
   }
@@ -647,45 +647,14 @@ body {
     width: 20px;
     height: 20px;
     position: absolute;
-    right: -10px;
-    top: 40px;
+    right: -20px;
+    top: 43px;
     visibility: visible;
-    background-color: grey;
+    background-color: royalblue;
+    /* background: rgb(255, 255, 255); */
+    /* background: linear-gradient( 90deg, rgba(255, 255, 255, 1) 0%, rgba(248, 248, 248, 1) 60%, rgba(248, 248, 248, 1) 63%, rgba(248, 248, 248, 1) 66%, rgba(248, 248, 248, 1) 69%, rgba(248, 248, 248, 1) 72%, rgba(246, 246, 246, 1) 74%, rgba(246, 246, 246, 1) 80%, rgba(246, 246, 246, 1) 86%, rgba(247, 247, 247, 1) 89%, rgba(248, 248, 248, 1) 91%, rgba(249, 249, 249, 1) 94%, rgba(245, 245, 245, 1) 96%, rgba(234, 234, 234, 1) 100%, rgba(224, 224, 224, 1) 100%, rgba(182, 182, 182, 1) 100%, rgba(143, 143, 143, 1) 100% ); */
     border-radius: 10px;
     border: 1px solid black;
-}
-
-.right-connector {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  right: -10px;
-  top: 40px;
-  visibility: visible;
-  background-color: grey;
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(248, 248, 248, 1) 60%,
-    rgba(248, 248, 248, 1) 63%,
-    rgba(248, 248, 248, 1) 66%,
-    rgba(248, 248, 248, 1) 69%,
-    rgba(248, 248, 248, 1) 72%,
-    rgba(246, 246, 246, 1) 74%,
-    rgba(246, 246, 246, 1) 80%,
-    rgba(246, 246, 246, 1) 86%,
-    rgba(247, 247, 247, 1) 89%,
-    rgba(248, 248, 248, 1) 91%,
-    rgba(249, 249, 249, 1) 94%,
-    rgba(245, 245, 245, 1) 96%,
-    rgba(234, 234, 234, 1) 100%,
-    rgba(224, 224, 224, 1) 100%,
-    rgba(182, 182, 182, 1) 100%,
-    rgba(143, 143, 143, 1) 100%
-  );
-  border-radius: 10px;
-  border: 1px solid black;
 }
 
 .ek-sidebar .left-connector {
@@ -694,4 +663,10 @@ body {
 
 .ek-sidebar .right-connector {
   visibility: hidden;
+}
+
+.ek-dashboard .iconCss {
+    width: auto;
+    border: 1px solid royalblue;
+    border-radius: 10px;
 }

@@ -1,30 +1,22 @@
 import React from "react";
 import { IconContext } from "react-icons";
 import { SiMicrosoftteams } from "react-icons/si";
+import { ReactConnectorStart, ReactConnectorEnd } from 'react-connector-tool';
 
-export const Teams = () => {
-  const onDragStart = (event) => {
-    event.dataTransfer.setData("text", event.target.id);
-  };
+export const Teams = (props) => {
+   
+  const { uniqueid, connectorContext, dragDropContext } = props;
+
 
   return (
-    // <div id="sidebar-circle" className='sidebar-circle' draggable="true" onDragStart={onDragStart}>
-    //    Quiz Item
-    //    <div className='connector-point connector-left' id="connector-left"></div>
-    //    <div className='connector-point connector-right'
-    //    connector="true" draggable = "true" id="connector-right"></div>
-    // </div>
     <div className="col-md-6 iconCss">
       <SiMicrosoftteams
         value={{ color: "green", size: "100em" }}
         id="sidebar-rectangle"
-        draggable="true"
-        onDragStart={onDragStart}
         onClick={(event) => {
           console.log("Rectangle Clicked ");
         }}
       >
-        StepPp
         <div
           className="connector-point connector-left"
           id="connector-left"
@@ -37,6 +29,15 @@ export const Teams = () => {
         ></div>
       </SiMicrosoftteams>
       <div className="iconLabel">Teams</div>
+
+
+      <ReactConnectorStart connectorContext={connectorContext} uniqueid = { uniqueid } >
+          <div className='right-connector' />
+      </ReactConnectorStart>
+
+      <ReactConnectorEnd connectorContext={connectorContext} uniqueid = { uniqueid } >
+          <div className='left-connector' />
+      </ReactConnectorEnd>
     </div>
   );
 };
