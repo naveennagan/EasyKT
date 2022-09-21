@@ -1,8 +1,8 @@
 import React from "react";
 import { IconContext } from "react-icons";
-import { FaPhotoVideo } from "react-icons/fa";
+import { SiMicrosoftteams } from "react-icons/si";
 
-export const Circle1 = () => {
+export const Teams = () => {
   const onDragStart = (event) => {
     event.dataTransfer.setData("text", event.target.id);
   };
@@ -15,7 +15,7 @@ export const Circle1 = () => {
     //    connector="true" draggable = "true" id="connector-right"></div>
     // </div>
     <div className="col-md-6 iconCss">
-      <FaPhotoVideo
+      <SiMicrosoftteams
         value={{ color: "green", size: "100em" }}
         id="sidebar-rectangle"
         draggable="true"
@@ -35,8 +35,8 @@ export const Circle1 = () => {
           draggable="true"
           id="connector-right"
         ></div>
-      </FaPhotoVideo>
-      <div className="iconLabel">Video</div>
+      </SiMicrosoftteams>
+      <div className="iconLabel">Teams</div>
     </div>
   );
 };

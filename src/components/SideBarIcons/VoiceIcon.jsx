@@ -1,8 +1,8 @@
 import React from "react";
 import { IconContext } from "react-icons";
-import { RiFeedbackFill } from "react-icons/ri";
+import { BiUserVoice } from "react-icons/bi";
 
-export const Circle5 = () => {
+export const Voice = () => {
   const onDragStart = (event) => {
     event.dataTransfer.setData("text", event.target.id);
   };
@@ -15,7 +15,7 @@ export const Circle5 = () => {
     //    connector="true" draggable = "true" id="connector-right"></div>
     // </div>
     <div className="col-md-6 iconCss">
-      <RiFeedbackFill
+      <BiUserVoice
         value={{ color: "green", size: "100em" }}
         id="sidebar-rectangle"
         draggable="true"
@@ -35,8 +35,8 @@ export const Circle5 = () => {
           draggable="true"
           id="connector-right"
         ></div>
-      </RiFeedbackFill>
-      <div className="iconLabel">Feedback</div>
+      </BiUserVoice>
+      <div className="iconLabel">Voice</div>
     </div>
   );
 };

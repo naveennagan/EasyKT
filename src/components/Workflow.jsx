@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CreateWorkflow } from "./CreateWorkflow";
 import { WorkflowItem } from "./WorkFlowItem";
 import { ReactDropArea } from 'react-drag-drop-tool';
@@ -15,6 +15,12 @@ export const Workflow = (props)=>{
    const hideCreateWorkflowView = () => {
         setShowCreateWorkflow(false);
    }
+
+   console.log(dragDropContext.data);
+
+   useEffect(()=>{
+    console.log(dragDropContext);
+   },[dragDropContext]);
 
     return (
         

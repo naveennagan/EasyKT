@@ -1,8 +1,8 @@
 import React from "react";
 import { IconContext } from "react-icons";
-import { ImWikipedia } from "react-icons/im";
+import { MdApproval } from "react-icons/md";
 
-export const Circle6 = () => {
+export const Approval = () => {
   const onDragStart = (event) => {
     event.dataTransfer.setData("text", event.target.id);
   };
@@ -15,7 +15,7 @@ export const Circle6 = () => {
     //    connector="true" draggable = "true" id="connector-right"></div>
     // </div>
     <div className="col-md-6 iconCss">
-      <ImWikipedia
+      <MdApproval
         value={{ color: "green", size: "100em" }}
         id="sidebar-rectangle"
         draggable="true"
@@ -35,8 +35,8 @@ export const Circle6 = () => {
           draggable="true"
           id="connector-right"
         ></div>
-      </ImWikipedia>
-      <div className="iconLabel">Wiki</div>
+      </MdApproval>
+      <div className="iconLabel">Approval</div>
     </div>
   );
 };

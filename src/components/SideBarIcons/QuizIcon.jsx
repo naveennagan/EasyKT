@@ -1,8 +1,8 @@
 import React from "react";
 import { IconContext } from "react-icons";
-import { SiMicrosoftteams } from "react-icons/si";
+import { MdQuiz } from "react-icons/md";
 
-export const Circle2 = () => {
+export const Quiz = () => {
   const onDragStart = (event) => {
     event.dataTransfer.setData("text", event.target.id);
   };
@@ -15,7 +15,7 @@ export const Circle2 = () => {
     //    connector="true" draggable = "true" id="connector-right"></div>
     // </div>
     <div className="col-md-6 iconCss">
-      <SiMicrosoftteams
+      <MdQuiz
         value={{ color: "green", size: "100em" }}
         id="sidebar-rectangle"
         draggable="true"
@@ -35,8 +35,8 @@ export const Circle2 = () => {
           draggable="true"
           id="connector-right"
         ></div>
-      </SiMicrosoftteams>
-      <div className="iconLabel">Teams</div>
+      </MdQuiz>
+      <div className="iconLabel">Quiz</div>
     </div>
   );
 };
