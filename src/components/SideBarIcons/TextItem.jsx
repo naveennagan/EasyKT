@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import { ReactConnectorStart, ReactConnectorEnd, ReactConnectorContext } from 'react-connector-tool';
+import { ReactConnectorStart, ReactConnectorEnd } from 'react-connector-tool';
 
 export const TextItem = (props)=>{
 

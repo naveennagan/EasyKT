@@ -10,7 +10,7 @@ export const WorkflowItem = (props)=>{
              {workflowData.name}
          </p>
          <div className="workflow-item-details">
-             <img className="workflow-item-image" src="https://i.picsum.photos/id/1006/200/200.jpg?hmac=yv53p45TOMz8bY4ZXUVRMFMO0_6d5vGuoWtE2hJhxlc"></img>
+             <img className="workflow-item-image" src="https://startinfinity.s3.us-east-2.amazonaws.com/production/blog/post/17/main/GeiehNbQ1t86Mg5zKnEgucWslfZXTckjj8mSDV2O.png"></img>
          </div>
          <div className="workflow-step-details">
              <p className="workflow-step">Total Steps - {workflowData.steps.length+1}</p>
