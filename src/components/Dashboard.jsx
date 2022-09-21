@@ -36,13 +36,13 @@ export const Dashboard = (props)=>{
     }
 
     return (
-    <div >
+        < >
         <div className='ek-dashboard'>
-       <DashBoardTabs onTabSelect ={selectTab} tab={tab} />
-       <div className='tab-container'>
-            {getTabContentView()}
-       </div>
-       </div>
-    </div>
+            <DashBoardTabs onTabSelect ={selectTab} tab={tab} />
+            <div className='tab-container'>
+                    {getTabContentView()}
+            </div>
+        </div>
+        </>
     )
 }
