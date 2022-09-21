@@ -88,12 +88,12 @@ body {
 }
 
 .dashboard-tab:hover {
-  box-shadow: 10px 10px 16px #000000;
+  box-shadow:  4px 4px 6px #000000;
   transform: translate3d(0px, -4px, 30px);
 }
 
 .tab-selected {
-  box-shadow: 10px 10px 16px #000000;
+  box-shadow:  4px 4px 6px #000000;
   transform: translate3d(0px, -4px, 60px);
 }
 
@@ -143,9 +143,9 @@ body {
   cursor: pointer;
   height: 300px;
   margin: 20px;
-  box-shadow: 10px 10px 16px #000000;
+  box-shadow:  4px 4px 6px #000000;
   margin-top: 45px;
-  color: 464EB8;
+  color: #464EB8;
 }
 
 .create-workflow-icon {
@@ -156,7 +156,7 @@ body {
   width: 300px;
   display: flex;
   flex-direction: column;
-  box-shadow: 10px 10px 16px #000000;
+  box-shadow:  4px 4px 6px #000000;
   margin: 10px;
   background-color: oldlace;
   height: fit-content;
@@ -168,7 +168,7 @@ body {
   padding: 5px;
   /* font-weight: bold; */
   margin: 10px;
-  background-color: darkslategray;
+  background-color: rgb(77, 76, 76);
   color: white;
   border: 1px solid palevioletred;
 }
@@ -176,17 +176,19 @@ body {
 .workflow-item-details {
   width: 100%;
   text-align: center;
-  margin: 10px;
+  padding: 10px;
 }
 
 .workflow-item-image {
   position: relative;
+  width: 260px;
+  height: 160px;
 }
 
 .workflow-step-details {
   text-align: center;
   height: 100px;
-  background-color: 464EB8;
+  background-color: #464EB8;
   color: white;
 }
 
@@ -255,7 +257,7 @@ body {
   justify-content: space-between;
   background-color: white;
   border: 1px solid black;
-  box-shadow: 10px 10px 16px #000000;
+  box-shadow:  4px 4px 6px #000000;
   transform: translate3d(0px, -4px, 30px);
   margin: auto;
   margin: 30px auto;
@@ -277,7 +279,7 @@ body {
   background-color: white;
   border: 1px solid black;
   border-radius: 50%;
-  box-shadow: 10px 10px 16px #000000;
+  box-shadow:  4px 4px 6px #000000;
   transform: translate3d(0px, -4px, 30px);
   margin: auto;
   margin: 30px auto;
@@ -294,7 +296,7 @@ body {
   top: 10px;
   right: 10px;
   background-color: peachpuff;
-  box-shadow: 10px 10px 16px #000000;
+  box-shadow:  4px 4px 6px #000000;
   padding: 10px;
   /* font-style: italic; */
   color: royalblue;
@@ -378,7 +380,7 @@ body {
   text-align: center;
   background-color: #bab8b8;
   padding: 10px;
-  box-shadow: 10px 10px 16px #000000;
+  box-shadow:  4px 4px 6px #000000;
 }
 
 .task-row-action:hover {
@@ -445,7 +447,7 @@ body {
 }
 
 .trigger-progress {
-  color: orangered;
+  color: red;
 }
 
 .trigger-row-action {
@@ -455,7 +457,7 @@ body {
   text-align: center;
   background-color: #c6c6c6;
   padding: 10px;
-  box-shadow: 10px 10px 16px #000000;
+  box-shadow:  4px 4px 6px #000000;
 }
 
 .trigger-row-action:hover {
@@ -496,4 +498,3 @@ body {
   padding-left: 10px;
   /* margin: -25px 0 0 -25px; */
 }
-
