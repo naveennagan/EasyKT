@@ -27,6 +27,7 @@
     "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@babel/preset-es2015": "^7.0.0-beta.53",
     "@babel/preset-react": "^7.18.6",
+    "@elastic/elasticsearch": "^8.4.0",
     "babel-loader": "^8.2.5",
     "babel-plugin-react-transform": "^3.0.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
@@ -34,6 +35,7 @@
     "body-parser": "^1.20.0",
     "bootstrap": "^5.2.1",
     "bootstrap-icons": "^1.9.1",
+    "core-js": "^3.25.2",
     "cors": "^2.8.5",
     "express": "^4.18.1",
     "lodash": "^4.17.21",
@@ -46,6 +48,7 @@
     "react-dom": "^18.2.0",
     "react-drag-drop-tool": "1.1.3",
     "react-draggable": "^4.4.5",
+    "react-modal": "^3.15.1",
     "react-scripts": "5.0.1",
     "webpack": "^5.74.0"
   },

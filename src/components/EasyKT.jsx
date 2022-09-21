@@ -1,15 +1,10 @@
-import React from 'react';
-import { Home } from './Home';
-import Modal from './Modal';
-import { ModalProvider } from '../utils/ModalContext';
+import React from "react";
+import { Home } from "./Home";
 
-export const EasyKT = ()=>{
-
-    return (
+export const EasyKT = () => {
+  return (
     <div>
-        <ModalProvider>
-          <Home />
-        </ModalProvider>
+      <Home />
     </div>
-    )
-}
+  );
+};

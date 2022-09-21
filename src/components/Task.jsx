@@ -1,12 +1,10 @@
-import React, {useState, useContext} from "react";
+import React, {useState} from "react";
 import { tasksData } from "../data/taskData";
-import { ModalContext } from "../utils/ModalContext";
 import TaskPreview from "./TaskPreview";
-import Modal from "./Modal";
+import CustomModal from "./Modal";
 
 export const Task = ()=>{
     const tasksListData = tasksData;
-    // const {show, setShow} = useContext(ModalContext)
    const [show, setShow] = useState(false)
    const [selectedTask, setSelectedTask] = useState(null)
 
@@ -39,7 +37,7 @@ export const Task = ()=>{
 
     return (
         <>
-         {!show && <div className="task-container">
+        <div className="task-container">
             <div className="task-table">
                 { taskHeaderView() }
                 {
@@ -48,12 +46,11 @@ export const Task = ()=>{
                     })
                 }
             </div>
-        </div>}
-        {show && <div className="task-container">
-        <div className="task-table">
-             <TaskPreview task={selectedTask}/> 
-             </div> 
-        </div>}
+        </div>
+        {show && 
+             <CustomModal>
+               <TaskPreview task={selectedTask} setShow={setShow} /> 
+             </CustomModal>}
         </>
         
     )

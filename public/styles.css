@@ -466,39 +466,59 @@ body{
     right: -10;
   }
  
-.taskPreviewButton {
+.preview-container{
+    display: flex;
+    flex-direction: column;
+}
+.preview-title {
+    font-size: 20px;
+    line-height: 40px;
+    flex: 1;
+    margin-top: 30px;
+    border-bottom: 1px solid #000
+}
+.preview-content {
+    flex: 3;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.preview-footer {
+    font-size: 30px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.preview-footer-buttons {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.preview-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.preview-help-view {
+    position: absolute;
+    background-color: rgba(0,103,184);
+    border-radius: 2px;
+    border: 1px solid #000;
+    width: 300px;
+    padding: 10px;
+    bottom: 70px;
+    left: 50%;
     font-size: 16px;
+    transform: translateX(-50%);
+    color: #fff;
 }
-
-
-/* .modal {
-   position: fixed;
-   left: 0;
-   top: 0;
-   right: 0;
-   bottom: 0;
-   background-color: rgba(0,0,0,0.5);
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
-.modal-content {
-    height: 90vh;
-    width: 90vh;
+.preview-help-button {
     background-color: #fff;
+    color: #000;
 }
-
-.modal-header, .modal-footer {
-    padding: 10px;
+.preview-help-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.modal-title {
-    margin: 0;
-}
-
-.modal-body {
-    padding: 10px;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-} */
-
