@@ -6,9 +6,8 @@ import { workflowData } from "../data/workflowData";
 import { WorkflowForm } from "./WorkflowForm";
 
 export const Workflow = (props) => {
-  const { dragDropContext } = props;
-
   const [showCreateWorkflow, setShowCreateWorkflow] = useState(false);
+  const { dragDropContext, connectorContext } = props;
 
   const workflowList = workflowData;
 
@@ -17,10 +16,8 @@ export const Workflow = (props) => {
   };
 
   console.log(dragDropContext.data);
-
-  useEffect(() => {
-    console.log(dragDropContext);
-  }, [dragDropContext]);
+  console.log(dragDropContext.data);
+  console.log(connectorContext);
 
   return showCreateWorkflow ? (
     <div className="row h-100">

@@ -12,9 +12,8 @@ import { Wiki } from "./SideBarIcons/WikiIcon";
 import { Voice } from "./SideBarIcons/VoiceIcon";
 
 export const Sidebar = (props) => {
-  const { dragDropContext } = props;
+  const { dragDropContext, connectorContext } = props;
 
-  const connectorContext = ReactConnectorContext("connect-shapes");
 
   return (
     <div className="ek-sidebar">
