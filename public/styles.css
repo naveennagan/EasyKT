@@ -404,8 +404,8 @@ body {
   width: 100%;
   padding: 5px;
   margin: 10px;
-  border: 1px solid 7B83EB;
-  background-color: gainsboro;
+  border: 1px solid #d2cdcd;
+  background-color: #e7e6e6;
   display: flex;
   flex-direction: column;
 }
