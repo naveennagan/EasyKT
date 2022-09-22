@@ -9,12 +9,12 @@ import { Workflow } from './Workflow';
 export const Dashboard = (props)=>{
     const [tab, setTab] = useState("Workflow");
 
-    const { dragDropContext } = props;
+    const { dragDropContext, connectorContext } = props;
 
     const getTabContentView = ()=>{
         switch(tab){
             case "Workflow":{
-                return <Workflow dragDropContext = {dragDropContext}/>
+                return <Workflow dragDropContext = {dragDropContext} connectorContext={connectorContext}/>
             }
             case "Trigger":{
                 return <Trigger />
