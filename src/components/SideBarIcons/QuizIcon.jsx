@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { IconContext } from "react-icons";
 import { MdQuiz } from "react-icons/md";
 import { ReactConnectorStart, ReactConnectorEnd } from 'react-connector-tool';
+import { AppContext } from "../AppContext";
 
 export const Quiz = (props) => {
 
   const { uniqueid, connectorContext, dragDropContext } = props;
 
- 
+  const { appState, setAppState } = useContext(AppContext);
+
   return (
     <div className="col-md-6 iconCss">
       <MdQuiz
@@ -15,6 +17,7 @@ export const Quiz = (props) => {
         id="sidebar-rectangle"
         onClick={(event) => {
           console.log("Rectangle Clicked ");
+          setAppState({ ...appState, selectedNode: `Quiz ${uniqueid}` });
         }}
       >
         <div

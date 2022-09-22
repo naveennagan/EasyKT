@@ -1,20 +1,26 @@
-import React from 'react';
-import { Menu } from './Menu';
-import { Container } from './Container';
-import { createReactDragDropContext  } from 'react-drag-drop-tool';
-import ReactConnectorContext from 'react-connector-tool/dist/ReactConnectorContext';
+import React, { useState } from "react";
+import { Menu } from "./Menu";
+import { Container } from "./Container";
+import { createReactDragDropContext } from "react-drag-drop-tool";
+import ReactConnectorContext from "react-connector-tool/dist/ReactConnectorContext";
+import { AppContext } from "./AppContext";
 
-export const Home = ()=>{
+export const Home = () => {
+  const [appState, setAppState] = useState({});
 
-    
-    const createDragDropContext = createReactDragDropContext("easy-kt-workflow");
+  const createDragDropContext = createReactDragDropContext("easy-kt-workflow");
 
-    const connectorContext = ReactConnectorContext("connect-shapes");
+  const connectorContext = ReactConnectorContext("connect-shapes");
 
-    
-    return (
-    <div className="ek-home">
-       <Menu />
-       <Container dragDropContext= {createDragDropContext} connectorContext={connectorContext}/>
-    </div>)
-}
+  return (
+    <AppContext.Provider value={{ appState, setAppState }}>
+      <div className="ek-home">
+        <Menu />
+        <Container
+          dragDropContext={createDragDropContext}
+          connectorContext={connectorContext}
+        />
+      </div>
+    </AppContext.Provider>
+  );
+};

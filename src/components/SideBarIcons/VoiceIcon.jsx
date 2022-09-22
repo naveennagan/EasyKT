@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { IconContext } from "react-icons";
 import { BiUserVoice } from "react-icons/bi";
-import { ReactConnectorStart, ReactConnectorEnd } from 'react-connector-tool';
+import { ReactConnectorStart, ReactConnectorEnd } from "react-connector-tool";
+import { AppContext } from "../AppContext";
 
 export const Voice = (props) => {
-  const { uniqueid, connectorContext, dragDropContext } = props;
+  const { uniqueid, connectorContext } = props;
+  const { appState, setAppState } = useContext(AppContext);
 
   return (
     <div className="col-md-6 iconCss">
@@ -12,7 +14,8 @@ export const Voice = (props) => {
         value={{ color: "green", size: "100em" }}
         id="sidebar-rectangle"
         onClick={(event) => {
-          console.log("Rectangle Clicked ");
+          console.log("Voice Rectangle Clicked ");
+          setAppState({ ...appState, selectedNode: `Voice ${uniqueid}` });
         }}
       >
         <div
@@ -27,12 +30,19 @@ export const Voice = (props) => {
         ></div>
       </BiUserVoice>
       <div className="iconLabel">Voice</div>
-      <ReactConnectorStart connectorContext={connectorContext} uniqueid = { uniqueid } >
-          <div className='right-connector' />
+      <ReactConnectorStart
+        connectorContext={connectorContext}
+        uniqueid={uniqueid}
+      >
+        <div className="right-connector" />
       </ReactConnectorStart>
 
-      <ReactConnectorEnd selector="create-workflow" connectorContext={connectorContext} uniqueid = { uniqueid } >
-          <div className='left-connector' />
+      <ReactConnectorEnd
+        selector="create-workflow"
+        connectorContext={connectorContext}
+        uniqueid={uniqueid}
+      >
+        <div className="left-connector" />
       </ReactConnectorEnd>
     </div>
   );

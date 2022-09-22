@@ -15,19 +15,17 @@ export const Workflow = (props) => {
     setShowCreateWorkflow(false);
   };
 
-  console.log(dragDropContext.data);
-  console.log(dragDropContext.data);
-  console.log(connectorContext);
+  console.log({props});
 
   return showCreateWorkflow ? (
     <div className="row h-100">
       <div className="col-9">
         <ReactDropArea dropContext={dragDropContext}>
-          <CreateWorkflow onHide={hideCreateWorkflowView} />
+          <CreateWorkflow />
         </ReactDropArea>
       </div>
       <div className="col-3 card p-2">
-        <WorkflowForm />
+        <WorkflowForm onHide={hideCreateWorkflowView} />
       </div>
     </div>
   ) : (

@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { IconContext } from "react-icons";
 import { RiFeedbackFill } from "react-icons/ri";
 import { ReactConnectorStart, ReactConnectorEnd } from 'react-connector-tool';
+import { AppContext } from "../AppContext";
 
 export const Feedback = (props) => {
 
   const { uniqueid, connectorContext, dragDropContext } = props;
+  const { appState, setAppState } = useContext(AppContext);
 
   return (
     <div className="col-md-6 iconCss">
@@ -14,6 +16,7 @@ export const Feedback = (props) => {
         id="sidebar-rectangle"
         onClick={(event) => {
           console.log("Rectangle Clicked ");
+          setAppState({ ...appState, selectedNode: `Feedback ${uniqueid}` });
         }}
       >
         <div

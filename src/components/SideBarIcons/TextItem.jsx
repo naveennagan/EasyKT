@@ -1,26 +1,33 @@
-import React from "react";
+import React, { useContext } from "react";
 
-import { ReactConnectorStart, ReactConnectorEnd } from 'react-connector-tool';
+import { ReactConnectorStart, ReactConnectorEnd } from "react-connector-tool";
+import { AppContext } from "../AppContext";
 
-export const TextItem = (props)=>{
+export const TextItem = (props) => {
+  const { uniqueid, connectorContext, dragDropContext } = props;
+  const { appState, setAppState } = useContext(AppContext);
 
-    const { uniqueid, connectorContext, dragDropContext } = props;
-    
-    return (
-        <div  className='sidebar-rectangle' onClick = {()=>{
-            console.log(uniqueid);
-            console.log(dragDropContext);
-            console.log(connectorContext);
-        }}>
-            Text Input
-            <ReactConnectorStart connectorContext={connectorContext} uniqueid = { uniqueid } >
-                <div className='right-connector' />
-            </ReactConnectorStart>
-            
-            
-            <ReactConnectorEnd selector="create-workflow" connectorContext={connectorContext} uniqueid = { uniqueid } >
-                <div className='left-connector' />
-            </ReactConnectorEnd>
-        </div>
-    )
-}
+  return (
+    <div
+      className="sidebar-rectangle"
+      onClick={() => {
+        setAppState({ ...appState, selectedNode: `Text ${uniqueid}` });
+      }}
+    >
+      Text Input
+      <ReactConnectorStart
+        connectorContext={connectorContext}
+        uniqueid={uniqueid}
+      >
+        <div className="right-connector" />
+      </ReactConnectorStart>
+      <ReactConnectorEnd
+        selector="create-workflow"
+        connectorContext={connectorContext}
+        uniqueid={uniqueid}
+      >
+        <div className="left-connector" />
+      </ReactConnectorEnd>
+    </div>
+  );
+};

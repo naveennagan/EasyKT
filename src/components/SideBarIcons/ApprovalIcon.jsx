@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { IconContext } from "react-icons";
 import { ReactConnectorStart, ReactConnectorEnd } from 'react-connector-tool';
 import { MdApproval } from "react-icons/md";
+import { AppContext } from "../AppContext";
 
 export const Approval = (props) => {
 
   const { uniqueid, connectorContext, dragDropContext } = props;
+  const { appState, setAppState } = useContext(AppContext);
 
 
   return (
@@ -15,6 +17,7 @@ export const Approval = (props) => {
         id="sidebar-rectangle"
         onClick={(event) => {
           console.log("Approval Clicked ");
+          setAppState({ ...appState, selectedNode: `Approval ${uniqueid}` });
         }}
       >
         <div

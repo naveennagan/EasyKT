@@ -1,11 +1,12 @@
-import React from "react";
-import { IconContext } from "react-icons";
+import React, { useContext } from "react";
 import { ImWikipedia } from "react-icons/im";
-import { ReactConnectorStart, ReactConnectorEnd } from 'react-connector-tool';
+import { ReactConnectorStart, ReactConnectorEnd } from "react-connector-tool";
+import { AppContext } from "../AppContext";
 
 export const Wiki = (props) => {
+  const { uniqueid, connectorContext } = props;
 
-  const { uniqueid, connectorContext, dragDropContext } = props;
+  const { appState, setAppState } = useContext(AppContext);
 
   return (
     <div className="col-md-6 iconCss">
@@ -13,7 +14,8 @@ export const Wiki = (props) => {
         value={{ color: "green", size: "100em" }}
         id="sidebar-rectangle"
         onClick={(event) => {
-          console.log("Rectangle Clicked ");
+          console.log("Wiki Rectangle Clicked ");
+          setAppState({ ...appState, selectedNode: `Wiki ${uniqueid}` });
         }}
       >
         <div
@@ -28,12 +30,19 @@ export const Wiki = (props) => {
         ></div>
       </ImWikipedia>
       <div className="iconLabel">Wiki</div>
-      <ReactConnectorStart connectorContext={connectorContext} uniqueid = { uniqueid } >
-          <div className='right-connector' />
+      <ReactConnectorStart
+        connectorContext={connectorContext}
+        uniqueid={uniqueid}
+      >
+        <div className="right-connector" />
       </ReactConnectorStart>
 
-      <ReactConnectorEnd selector="create-workflow" connectorContext={connectorContext} uniqueid = { uniqueid } >
-          <div className='left-connector' />
+      <ReactConnectorEnd
+        selector="create-workflow"
+        connectorContext={connectorContext}
+        uniqueid={uniqueid}
+      >
+        <div className="left-connector" />
       </ReactConnectorEnd>
     </div>
   );

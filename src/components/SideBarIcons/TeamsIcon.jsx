@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { IconContext } from "react-icons";
 import { SiMicrosoftteams } from "react-icons/si";
 import { ReactConnectorStart, ReactConnectorEnd } from 'react-connector-tool';
+import { AppContext } from "../AppContext";
 
 export const Teams = (props) => {
    
   const { uniqueid, connectorContext, dragDropContext } = props;
+  const { appState, setAppState } = useContext(AppContext);
 
 
   return (
@@ -15,6 +17,7 @@ export const Teams = (props) => {
         id="sidebar-rectangle"
         onClick={(event) => {
           console.log("Rectangle Clicked ");
+          setAppState({ ...appState, selectedNode: `Teams ${uniqueid}` });
         }}
       >
         <div

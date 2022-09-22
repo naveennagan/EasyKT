@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { IconContext } from "react-icons";
 import { FcHeadset } from "react-icons/fc";
 import { IoTextOutline } from "react-icons/io5";
 import { ReactConnectorStart, ReactConnectorEnd } from 'react-connector-tool';
+import { AppContext } from "../AppContext";
 
 export const Text = (props) => {
 
   const { uniqueid, connectorContext, dragDropContext } = props;
+
+  const { appState, setAppState } = useContext(AppContext);
 
   const onDragStart = (event) => {
     event.dataTransfer.setData("text", event.target.id);
@@ -19,6 +22,7 @@ export const Text = (props) => {
         id="sidebar-rectangle"
         onClick={(event) => {
           console.log("Rectangle Clicked ");
+          setAppState({ ...appState, selectedNode: `Wiki ${uniqueid}` });
         }}
       >
         <div
