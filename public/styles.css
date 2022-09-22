@@ -378,10 +378,9 @@ body {
 
 .close-workflow {
   position: relative;
-
   left: 85%;
-  background-color: rgb(242 238 238);
-  box-shadow: 1px 1px 4px #000000;
+  /* background-color: rgb(242 238 238); */
+  /* box-shadow: 1px 1px 4px #000000; */
   padding: 10px;
   height: 55px;
   margin: 4px;
