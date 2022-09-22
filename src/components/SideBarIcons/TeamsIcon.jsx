@@ -16,7 +16,7 @@ export const Teams = (props) => {
         value={{ color: "green", size: "100em" }}
         id="sidebar-rectangle"
         onClick={(event) => {
-          console.log("Rectangle Clicked ");
+          console.log("Rectangle Clicked ", uniqueid);
           setAppState({ ...appState, selectedNode: `Teams ${uniqueid}` });
         }}
       >
