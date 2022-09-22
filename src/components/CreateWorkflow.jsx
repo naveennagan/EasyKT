@@ -1,5 +1,5 @@
 import React from "react";
-import { MdSaveAlt } from "react-icons/md";
+import { AiOutlineSave } from "react-icons/ai";
 import { IoClose } from "react-icons/io5";
 
 export const CreateWorkflow = (props) => {
@@ -22,7 +22,7 @@ export const CreateWorkflow = (props) => {
             onHide();
           }}
         >
-          <MdSaveAlt>&#10006;</MdSaveAlt>
+          <AiOutlineSave>&#10006;</AiOutlineSave>
         </button>
       </div>
     </>
