@@ -9,12 +9,12 @@ import { Workflow } from './Workflow';
 export const Dashboard = (props)=>{
     const [tab, setTab] = useState("Workflow");
 
-    const { dragDropContext } = props;
+    const { dragDropContext, connectorContext } = props;
 
     const getTabContentView = ()=>{
         switch(tab){
             case "Workflow":{
-                return <Workflow dragDropContext = {dragDropContext}/>
+                return <Workflow dragDropContext = {dragDropContext} connectorContext={connectorContext}/>
             }
             case "Trigger":{
                 return <Trigger />
@@ -36,13 +36,13 @@ export const Dashboard = (props)=>{
     }
 
     return (
-    <div >
+        < >
         <div className='ek-dashboard'>
-       <DashBoardTabs onTabSelect ={selectTab} tab={tab} />
-       <div className='tab-container'>
-            {getTabContentView()}
-       </div>
-       </div>
-    </div>
+            <DashBoardTabs onTabSelect ={selectTab} tab={tab} />
+            <div className='tab-container'>
+                    {getTabContentView()}
+            </div>
+        </div>
+        </>
     )
 }

@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { IconContext } from "react-icons";
 import { FcHeadset } from "react-icons/fc";
 import { IoTextOutline } from "react-icons/io5";
+import { ReactConnectorStart, ReactConnectorEnd } from 'react-connector-tool';
+import { AppContext } from "../AppContext";
 
-export const Text = () => {
+export const Text = (props) => {
+
+  const { uniqueid, connectorContext, dragDropContext } = props;
+
+  const { appState, setAppState } = useContext(AppContext);
+
   const onDragStart = (event) => {
     event.dataTransfer.setData("text", event.target.id);
   };
@@ -13,13 +20,11 @@ export const Text = () => {
       <IoTextOutline
         value={{ color: "green", size: "100em" }}
         id="sidebar-rectangle"
-        draggable="true"
-        onDragStart={onDragStart}
         onClick={(event) => {
           console.log("Rectangle Clicked ");
+          setAppState({ ...appState, selectedNode: `Wiki ${uniqueid}` });
         }}
       >
-        StepPp
         <div
           className="connector-point connector-left"
           id="connector-left"
@@ -32,6 +37,13 @@ export const Text = () => {
         ></div>
       </IoTextOutline>
       <div className="iconLabel">Text</div>
+      <ReactConnectorStart connectorContext={connectorContext} uniqueid = { uniqueid } >
+          <div className='right-connector' />
+      </ReactConnectorStart>
+
+      <ReactConnectorEnd selector="create-workflow" connectorContext={connectorContext} uniqueid = { uniqueid } >
+          <div className='left-connector' />
+      </ReactConnectorEnd>
     </div>
   );
 };

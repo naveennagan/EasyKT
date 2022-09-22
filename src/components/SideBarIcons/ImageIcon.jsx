@@ -1,30 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
 import { IconContext } from "react-icons";
 import { BsImage } from "react-icons/bs";
+import { ReactConnectorStart, ReactConnectorEnd } from 'react-connector-tool';
+import { AppContext } from "../AppContext";
 
-export const Image = () => {
-  const onDragStart = (event) => {
-    event.dataTransfer.setData("text", event.target.id);
-  };
+export const Image = (props) => {
+
+  const { uniqueid, connectorContext, dragDropContext } = props;
+  const { appState, setAppState } = useContext(AppContext);
 
   return (
-    // <div id="sidebar-circle" className='sidebar-circle' draggable="true" onDragStart={onDragStart}>
-    //    Quiz Item
-    //    <div className='connector-point connector-left' id="connector-left"></div>
-    //    <div className='connector-point connector-right'
-    //    connector="true" draggable = "true" id="connector-right"></div>
-    // </div>
+   
     <div className="col-md-6 iconCss">
       <BsImage
         value={{ color: "green", size: "100em" }}
         id="sidebar-rectangle"
-        draggable="true"
-        onDragStart={onDragStart}
         onClick={(event) => {
           console.log("Rectangle Clicked ");
+          setAppState({ ...appState, selectedNode: `Image ${uniqueid}` });
         }}
       >
-        StepPp
         <div
           className="connector-point connector-left"
           id="connector-left"
@@ -37,6 +32,14 @@ export const Image = () => {
         ></div>
       </BsImage>
       <div className="iconLabel">Image</div>
+
+      <ReactConnectorStart connectorContext={connectorContext} uniqueid = { uniqueid } >
+          <div className='right-connector' />
+      </ReactConnectorStart>
+
+      <ReactConnectorEnd selector="create-workflow" connectorContext={connectorContext} uniqueid = { uniqueid } >
+          <div className='left-connector' />
+      </ReactConnectorEnd>
     </div>
   );
 };

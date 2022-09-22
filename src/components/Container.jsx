@@ -4,12 +4,13 @@ import { Dashboard } from './Dashboard';
 
 export const Container = (props)=>{
     
-    const { dragDropContext } = props;
+    const { dragDropContext, connectorContext } = props;
+
 
     return (
     <div className='ek-container'>
-        <Sidebar dragDropContext = {dragDropContext} />
-        <Dashboard dragDropContext= {dragDropContext} />
+        <Sidebar dragDropContext = {dragDropContext} connectorContext={connectorContext}/>
+        <Dashboard dragDropContext= {dragDropContext} connectorContext={connectorContext}/>
     </div>
     )
 }

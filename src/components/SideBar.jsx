@@ -12,31 +12,30 @@ import { Wiki } from "./SideBarIcons/WikiIcon";
 import { Voice } from "./SideBarIcons/VoiceIcon";
 
 export const Sidebar = (props) => {
-  const { dragDropContext } = props;
+  const { dragDropContext, connectorContext } = props;
 
-  const connectorContext = ReactConnectorContext("connect-shapes");
 
   return (
     <div className="ek-sidebar">
-      <ReactDraggable targetContext={dragDropContext} uniqueid="circle-item">
+      <ReactDraggable targetContext={dragDropContext} uniqueid="image-item">
         <Image
-          uniqueid="circle-item"
+          uniqueid="image-item"
           connectorContext={connectorContext}
           dragDropContext={dragDropContext}
         />
       </ReactDraggable>
 
-      <ReactDraggable targetContext={dragDropContext} uniqueid="circle1-item">
+      <ReactDraggable targetContext={dragDropContext} uniqueid="video-item">
         <Video
-          uniqueid="circle1-item"
+          uniqueid="video-item"
           connectorContext={connectorContext}
           dragDropContext={dragDropContext}
         />
       </ReactDraggable>
 
-      <ReactDraggable targetContext={dragDropContext} uniqueid="circle2-item">
+      <ReactDraggable targetContext={dragDropContext} uniqueid="teams-item">
         <Teams
-          uniqueid="circle2-item"
+          uniqueid="teams-item"
           connectorContext={connectorContext}
           dragDropContext={dragDropContext}
         />
@@ -50,33 +49,33 @@ export const Sidebar = (props) => {
         />
       </ReactDraggable>
 
-      <ReactDraggable targetContext={dragDropContext} uniqueid="circle4-item">
+      <ReactDraggable targetContext={dragDropContext} uniqueid="approval-item">
         <Approval
-          uniqueid="circle4-item"
+          uniqueid="approval-item"
           connectorContext={connectorContext}
           dragDropContext={dragDropContext}
         />
       </ReactDraggable>
 
-      <ReactDraggable targetContext={dragDropContext} uniqueid="circle5-item">
+      <ReactDraggable targetContext={dragDropContext} uniqueid="feedback-item">
         <Feedback
-          uniqueid="circle5-item"
+          uniqueid="feedback-item"
           connectorContext={connectorContext}
           dragDropContext={dragDropContext}
         />
       </ReactDraggable>
 
-      <ReactDraggable targetContext={dragDropContext} uniqueid="circle6-item">
+      <ReactDraggable targetContext={dragDropContext} uniqueid="wiki-item">
         <Wiki
-          uniqueid="circle6-item"
+          uniqueid="wiki-item"
           connectorContext={connectorContext}
           dragDropContext={dragDropContext}
         />
       </ReactDraggable>
 
-      <ReactDraggable targetContext={dragDropContext} uniqueid="circle7-item">
+      <ReactDraggable targetContext={dragDropContext} uniqueid="voice-item">
         <Voice
-          uniqueid="circle7-item"
+          uniqueid="voice-item"
           connectorContext={connectorContext}
           dragDropContext={dragDropContext}
         />
