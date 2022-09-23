@@ -1,21 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { CreateWorkflow } from "./CreateWorkflow";
 import { WorkflowItem } from "./WorkFlowItem";
 import { ReactDropArea } from "react-drag-drop-tool";
-import { workflowData } from "../data/workflowData";
 import { WorkflowForm } from "./WorkflowForm";
+import { AppContext } from "./AppContext";
 
 export const Workflow = (props) => {
   const [showCreateWorkflow, setShowCreateWorkflow] = useState(false);
   const { dragDropContext, connectorContext } = props;
 
-  const workflowList = workflowData;
+  const {
+    appState: { workflowData: workflowList },
+  } = useContext(AppContext);
 
   const hideCreateWorkflowView = () => {
     setShowCreateWorkflow(false);
   };
 
-  console.log({props});
+  console.log({ props });
 
   return showCreateWorkflow ? (
     <div className="row h-100">
@@ -39,7 +41,7 @@ export const Workflow = (props) => {
         <span className="create-workflow-icon">&#43;</span>
       </div>
       <>
-        {workflowList.map((workflowData) => {
+        {workflowList?.map((workflowData) => {
           return <WorkflowItem workflowData={workflowData}></WorkflowItem>;
         })}
       </>
