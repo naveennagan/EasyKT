@@ -1,14 +1,15 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./TaskPreview.css";
 import { Type } from "../../data/taskData";
-import '../../../node_modules/video-react/dist/video-react.css';
-import { Player } from 'video-react';
-import Parser from 'html-react-parser';
+import "../../../node_modules/video-react/dist/video-react.css";
+import { Player } from "video-react";
+import Parser from "html-react-parser";
 
 const ContentWindow = ({ selectedStep, setShowCongratulations }) => {
-  const { description: {type, data} } = selectedStep;
-  const [result, setResult] = useState('')
- 
+  const {
+    description: { type, data },
+  } = selectedStep;
+  const [result, setResult] = useState("");
 
   if (type === Type.Text) {
     const { text } = data;
@@ -22,13 +23,13 @@ const ContentWindow = ({ selectedStep, setShowCongratulations }) => {
   if (type === Type.Quiz) {
     const { question, options, answer } = data;
     const selectAnswer = (text) => {
-        if(text === answer){
-            setResult('Correct')
-            setShowCongratulations(true)
-        }else{
-            setResult('Wrong')
-        }
-    }
+      if (text === answer) {
+        setResult("Correct");
+        setShowCongratulations(true);
+      } else {
+        setResult("Wrong");
+      }
+    };
 
     return (
       <div className="preview-content">
@@ -37,18 +38,24 @@ const ContentWindow = ({ selectedStep, setShowCongratulations }) => {
           <td>{Parser(question)}</td>
         </div>
         {options.map((text, index) => (
-            <div>
-          <button
+          <div>
+            <button
               key={index}
               className="preview-quiz-button "
-              onClick={()=>{
-                selectAnswer(text)
-              }}>
-              {index+1}. {text}
-         </button>
-         </div>
+              onClick={() => {
+                selectAnswer(text);
+              }}
+            >
+              {index + 1}. {text}
+            </button>
+          </div>
         ))}
-        <div className="preview-quiz-result">Result: <span style={{color: result==='Correct'? '#007500': '#ff0000'}}>{result}</span></div>
+        <div className="preview-quiz-result">
+          Result:{" "}
+          <span style={{ color: result === "Correct" ? "#007500" : "#ff0000" }}>
+            {result}
+          </span>
+        </div>
       </div>
     );
   }
@@ -58,7 +65,7 @@ const ContentWindow = ({ selectedStep, setShowCongratulations }) => {
     return (
       <div className="preview-content">
         <td>{Parser(text)}</td>
-        <div className="preview-image" >
+        <div className="preview-image">
           <img src={link} />
         </div>
       </div>
@@ -70,13 +77,10 @@ const ContentWindow = ({ selectedStep, setShowCongratulations }) => {
     return (
       <div className="preview-content">
         <td>{Parser(text)}</td>
-        <div className="preview-image" >
-        <div className="video-container">
-        <Player
-          playsInline
-          src={link}
-        />
-        </div> 
+        <div className="preview-image">
+          <div className="video-container">
+            <Player playsInline src={link} />
+          </div>
         </div>
       </div>
     );
