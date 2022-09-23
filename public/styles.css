@@ -10,19 +10,11 @@ body {
 
 .ek-menu {
   background-color: #464EB8;
-  /* height: 70px; */
-  /* border-radius: 10px; */
   text-align: center;
   color: white;
   font-size: 24px;
   align-content: center;
-  /* line-height: 80px; */
-  /* margin-top: -9px; */
   width: 100%;
-  /* margin-left: -10px; */
-  /* margin-right: -50px; */
-  /* padding-top: -7px; */
-  /* font-weight: 480; */
 }
 
 .ek-container {
@@ -128,7 +120,7 @@ body {
   height: 40px;
 
   line-height: 35px;
-  width: 120px;
+  width: 180px;
   font-size: 16px;
   border: 1px solid rgb(153, 151, 151);
   /* font-weight: bold; */

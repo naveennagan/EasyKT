@@ -19,8 +19,16 @@ export const Home = () => {
 
   const connectorContext = ReactConnectorContext("connect-shapes");
 
+  const resetData = () => {
+    setAppState({
+      workflowData,
+      triggersData,
+      tasksData,
+    });
+  };
+
   return (
-    <AppContext.Provider value={{ appState, setAppState }}>
+    <AppContext.Provider value={{ appState, setAppState, resetData }}>
       <div className="ek-home">
         <Menu />
         <Container

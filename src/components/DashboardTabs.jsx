@@ -45,6 +45,16 @@ export const DashBoardTabs = (props) => {
       >
         Search Bot
       </div>
+      <div
+        className={`dashboard-tab ${
+          tab === "SmartConverter" ? "tab-selected" : "tab-not-selected"
+        }`}
+        onClick={() => {
+          onTabSelect("SmartConverter");
+        }}
+      >
+        Smart Converter
+      </div>
     </div>
   );
 };
