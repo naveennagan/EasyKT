@@ -5,7 +5,7 @@ export const triggersData = [
         status:"Progress",
         workflow: "workflow-1",
         currentStep: 2,
-        totalSteps: 3,
+        totalSteps: 4,
         assignedTo: "Steve"
     },
     {

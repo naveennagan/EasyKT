@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { tasksData } from "../data/taskData";
-import TaskPreview from "./TaskPreview";
 import CustomModal from "./Modal";
+import TaskPreview from './task-preview';
 
 export const Task = ()=>{
     const tasksListData = tasksData;

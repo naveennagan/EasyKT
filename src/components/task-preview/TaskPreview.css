@@ -1,0 +1,155 @@
+.preview-container{
+    display: flex;
+    flex-direction: column;
+    background-color: oldlace;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+.preview-title-container {
+    line-height: 40px;
+    margin-top: 30px; 
+}
+.preview-title {
+  font-size: 20px;
+  color: #464EB8;
+  border-bottom: 1px solid #464EB8;
+  font-weight: 600;
+}
+.preview-content {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    overflow: scroll;
+}
+.preview-footer {
+    font-size: 40px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.preview-footer-buttons {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #464EB8;
+}
+.preview-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #464EB8;
+    font-weight: 600;
+}
+.preview-status-button {
+    position: absolute;
+    top: 10px;
+    right: 60px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff; 
+    background-color: #464EB8;
+    border-radius: 4px;
+    border: 1px solid #464EB8;
+}
+.preview-help-view {
+    position: absolute;
+    background-color: #464EB8;
+    border-radius: 4px;
+    width: 300px;
+    padding: 15px;
+    bottom: 70px;
+    left: 50%;
+    font-size: 16px;
+    transform: translateX(-50%);
+    color: #fff;
+}
+.preview-help-button {
+    background-color: oldlace;
+    color: #464EB8;
+    border: none;
+}
+.preview-help-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.preview-query-view {
+    position: absolute;
+    background-color: #464EB8;
+    border-radius: 4px;
+    width: 600px;
+    padding: 10px;
+    bottom: 70px;
+    left: 50%;
+    font-size: 16px;
+    transform: translateX(-50%);
+    color: #fff;
+}
+.preview-query-button {
+    background-color: oldlace;
+    color: #464EB8;
+    border: none; 
+    margin-left: 5px;
+}
+.preview-image {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.preview-quiz-question {
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+.preview-quiz-button {
+    background-color: oldlace;
+    color: #464EB8;
+    border: none; 
+    line-height: 40px;
+    font-size: 15px;
+}
+.preview-quiz-selected {
+    font-weight: 500;
+}
+.preview-quiz-result {
+    margin-top: 50px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.preview-congratulation {
+    position: absolute;
+    background-color: #464EB8;
+    border-radius: 4px;
+    width: 300px;
+    padding: 20px;
+    bottom: 200px;
+    left: 50%;
+    font-size: 16px;
+    transform: translateX(-50%);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.preview-success-image {
+    color: #FFBF00;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.preview-help-image {
+    color: #fff;
+    margin-left: 10px;
+}
+.preview-help-view a:hover {
+    color: yellow;
+  }
+.video-container {
+    width: 80%;
+}
