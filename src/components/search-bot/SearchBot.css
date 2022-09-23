@@ -7,16 +7,18 @@
 }
 
 .search-rounded {
-  border-radius: 50px;
+  border-radius: 100px;
   font-size: large;
   width: 50vw;
   border: 2px solid #ccc;
-  color: rgb(1, 126, 184);
+  color: white;
+  border: none;
+  background-color: #0303034f;
 }
 
 .font-size-large {
   font-size: large;
-  color: rgb(1, 126, 184);
+  color: #030303;
   cursor: pointer;
 }
 

@@ -4,9 +4,16 @@ import { Container } from "./Container";
 import { createReactDragDropContext } from "react-drag-drop-tool";
 import ReactConnectorContext from "react-connector-tool/dist/ReactConnectorContext";
 import { AppContext } from "./AppContext";
+import { workflowData } from "../data/workflowData";
+import { triggersData } from "../data/triggerData";
+import { tasksData } from "../data/taskData";
 
 export const Home = () => {
-  const [appState, setAppState] = useState({});
+  const [appState, setAppState] = useState({
+    workflowData,
+    triggersData,
+    tasksData,
+  });
 
   const createDragDropContext = createReactDragDropContext("easy-kt-workflow");
 
