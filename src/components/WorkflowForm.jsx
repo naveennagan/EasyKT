@@ -17,8 +17,19 @@ export const WorkflowForm = (props) => {
 
   return (
     <div className="h3">
-      <div className="mb-3">
+      <div className="mb-3 text-left">
         Workflow Name
+        <input
+          type="text"
+          className="form-control"
+          value={formData.wfName || ""}
+          onChange={(e) => {
+            setFormData({ ...formData, wfName: e.target.value });
+          }}
+        />
+      </div>
+      <div className="mb-3 text-left">
+        Workflow Description
         <input
           type="text"
           className="form-control"
@@ -30,10 +41,10 @@ export const WorkflowForm = (props) => {
       </div>
       {appState?.selectedNode && (
         <>
-          <div className="mb-3">
+          <div className="mb-3 text-left">
             Node Type: {appState.selectedNode.split(" ")?.[0]}
           </div>
-          <div className="mb-3">
+          <div className="mb-3 text-left">
             Current Node Name
             <input
               type="text"
@@ -45,9 +56,20 @@ export const WorkflowForm = (props) => {
             />
           </div>
 
-          <div className="mb-3">
+          <div className="mb-3 text-left">
             Node Description
             <textarea
+              type="text"
+              className="form-control"
+              value={formData.nodeDesc || ""}
+              onChange={(e) => {
+                setFormData({ ...formData, nodeDesc: e.target.value });
+              }}
+            />
+          </div>
+          <div className="mb-3  text-left">
+            Author
+            <input
               type="text"
               className="form-control"
               value={formData.nodeDesc || ""}
