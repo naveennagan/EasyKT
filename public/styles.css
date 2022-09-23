@@ -644,10 +644,10 @@ body {
     width: 20px;
     height: 20px;
     position: absolute;
-    left: -10px;
-    top: 40px;
+    left: -20px;
+    top: 43px;
     visibility: visible;
-    background-color: grey;
+    background-color: royalblue;
     border-radius: 10px;
     border: 1px solid black;
   }
