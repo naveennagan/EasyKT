@@ -31,7 +31,7 @@ export const Task = ()=>{
             <p className="task-row-title"> { `Step ${task.currentStep} of ${task.totalSteps} completed.`} </p>
             <p className="task-row-title"> {task.triggeredBy} </p>
             <p className={`task-row-title ${task.status === 'Done' ? 'task-completed':'task-progress'}`}> {task.status} </p>
-            <button type="button" className="task-row-title task-row-action" onClick={() => openTaskPreview(task)}> {task.status ==='Done' ? 'Review': 'Resume'}</button>
+            <button className="task-row-title task-row-action" onClick={() => openTaskPreview(task)}> {task.status ==='Done' ? 'Review': 'Resume'}</button>
         </div>
     }
 
