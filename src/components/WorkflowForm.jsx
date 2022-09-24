@@ -12,11 +12,13 @@ export const WorkflowForm = (props) => {
     setFormData({
       ...appState[appState.selectedNode],
       wfName: appState.workflowName,
+      wfDesc: appState.workflowDesc,
+      wfAuthor: appState.workflowAuthor,
     });
   }, [appState.selectedNode]);
 
   return (
-    <div className="h3">
+    <div className="h3 font-big m-2">
       <div className="mb-3 text-left">
         Workflow Name
         <input
@@ -81,22 +83,49 @@ export const WorkflowForm = (props) => {
         </>
       )}
 
-      <button className="close-workflow" onClick={onHide}>
-        <IoClose>&#10006;</IoClose>
-      </button>
-      <button
-        className="close-workflow"
-        onClick={() => {
-          setAppState({
-            ...appState,
-            [appState.selectedNode]: formData,
-            workflowName: formData.wfName,
-            selectedNode: null,
-          });
-        }}
-      >
-        <AiOutlineSave>&#10006;</AiOutlineSave>
-      </button>
+      <div className="mt-5">
+        <button className="btn btn-primary m-3" onClick={onHide} title="close workflow">
+          <i className="bi bi-x-lg m-4 font-size-large"></i>
+        </button>
+        <button
+          className="btn btn-primary"
+          title="save workflow"
+          onClick={() => {
+            setAppState({
+              ...appState,
+              [appState.selectedNode]: formData,
+              workflowName: formData.wfName,
+              workflowAuthor: formData.wfAuthor,
+              workflowDesc: formData.wfDesc,
+              selectedNode: null,
+            });
+          }}
+        >
+          <i className="bi bi-check2 m-4 font-size-large"></i>
+        </button>
+        <button
+          className="btn btn-primary m-3"
+          title="create workflow"
+          onClick={() => {
+            setAppState({
+              ...appState,
+              workflowData: [
+                ...appState.workflowData,
+                {
+                  name: formData.wfName,
+                  description: formData.wfDesc,
+                  id: appState.workflowData.length + 2,
+                  author: formData.author,
+                  steps: [{}],
+                },
+              ],
+            });
+            onHide();
+          }}
+        >
+          <i className="bi bi-diagram-3 m-4 font-size-large"></i>
+        </button>
+      </div>
     </div>
   );
 };

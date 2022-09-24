@@ -710,5 +710,7 @@ body {
     margin-left: 30%;
 }
 
-
+.font-big  input{
+  font-size: medium;
+}
 
