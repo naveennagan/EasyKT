@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { AppContext } from "./AppContext";
 import { DashBoardTabs } from "./DashboardTabs";
 import { SearchBot } from "./search-bot/SearchBot";
+import { SmartConverter } from "./smart-converter/SmartConverter";
 import { Task } from "./Task";
 import { Trigger } from "./Trigger";
 import { Workflow } from "./Workflow";
@@ -30,6 +31,9 @@ export const Dashboard = (props) => {
       }
       case "SearchBot": {
         return <SearchBot />;
+      }
+      case "SmartConverter": {
+        return <SmartConverter />;
       }
       default: {
         return <Workflow dragDropContext={dragDropContext} />;

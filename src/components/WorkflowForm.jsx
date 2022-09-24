@@ -33,19 +33,30 @@ export const WorkflowForm = (props) => {
         <input
           type="text"
           className="form-control"
-          value={formData.wfName || ""}
+          value={formData.wfDesc || ""}
           onChange={(e) => {
-            setFormData({ ...formData, wfName: e.target.value });
+            setFormData({ ...formData, wfDesc: e.target.value });
+          }}
+        />
+      </div>
+      <div className="mb-3  text-left">
+        Author
+        <input
+          type="text"
+          className="form-control"
+          value={formData.author || ""}
+          onChange={(e) => {
+            setFormData({ ...formData, author: e.target.value });
           }}
         />
       </div>
       {appState?.selectedNode && (
         <>
           <div className="mb-3 text-left">
-            Node Type: {appState.selectedNode.split(" ")?.[0]}
+            Step Type: {appState.selectedNode.split(" ")?.[0]}
           </div>
           <div className="mb-3 text-left">
-            Current Node Name
+            Current Step Name
             <input
               type="text"
               className="form-control"
@@ -57,19 +68,8 @@ export const WorkflowForm = (props) => {
           </div>
 
           <div className="mb-3 text-left">
-            Node Description
+            Step Description
             <textarea
-              type="text"
-              className="form-control"
-              value={formData.nodeDesc || ""}
-              onChange={(e) => {
-                setFormData({ ...formData, nodeDesc: e.target.value });
-              }}
-            />
-          </div>
-          <div className="mb-3  text-left">
-            Author
-            <input
               type="text"
               className="form-control"
               value={formData.nodeDesc || ""}
