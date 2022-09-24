@@ -6,3 +6,6 @@
     display: flex;
   }
   
+.file-input{
+    width: fit-content;
+}
