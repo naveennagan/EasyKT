@@ -5,13 +5,20 @@ export const AssignWorkflow = (props)=>{
   
 
   return <div className='assign-workflow'>
+      <p className='workflow-modal-title'> Assign Workflow</p>
+      <i
+          className="bi bi-x-lg preview-close-button"
+          onClick={ onCancel }
+        ></i>
       <div className='workflow-assign-details'>
             <div className='workflow-details'>
-                Onboarding Flow
+                <p className='worflow-title'>{ workflowData.name }</p>
+                <p className='worflow-label'>Steps: {workflowData.steps.length}</p>
+                <p className='worflow-label'>Author: {workflowData.author}</p>
             </div>
             <div className='workflow-assignees'>
-                <p>Assign To </p>
-                <select className="selectpicker">
+                <p className='worflow-assign-label'>Assign To </p>
+                <select className="select-user-picker">
                     <option>Steve</option>
                     <option>John</option>
                     <option>Dave</option>

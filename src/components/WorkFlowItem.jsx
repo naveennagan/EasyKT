@@ -20,15 +20,15 @@ export const WorkflowItem = (props) => {
       <CustomModal
         style={{
           content: {
-            height: "600px",
-            width: "600px",
+            height: "300px",
+            width: "300px",
             inset: "100px",
             padding: "0px",
             margin: "auto",
           },
         }}
       >
-        <AssignWorkflow onAssign={onAssign} onCancel={onCancel} />
+        <AssignWorkflow workflowData= {workflowData} onAssign={onAssign} onCancel={onCancel} />
       </CustomModal>
     );
   };

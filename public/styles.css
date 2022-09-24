@@ -684,8 +684,36 @@ body {
 .workflow-assign-details{
     display: flex;
     margin-top: 20%;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
+}
+
+.workflow-modal-title{
+    position: absolute;
+    top: 0px;
+    font-size: 20px;
+    left: 20px;
+    top: 10px;
+}
+
+.worflow-title{
+    margin: 5px;
+    font-size: 30px;
+}
+
+.worflow-assign-label{
+    margin: 10px;
+}
+
+.worflow-label{
+    margin: 10px;
+    font-size: 14px;
+}
+
+.select-user-picker {
+    margin: 10px;
+    cursor: pointer;
+    padding: 5px;
 }
 
 .workflow-details {
@@ -703,14 +731,42 @@ body {
 
 .workflow-actions {
     position: absolute;
-    font-size: 40px;
+    font-size: 20px;
     margin: auto;
-    bottom: 20px;
+    bottom: 10px;
     text-align: center;
-    margin-left: 30%;
+    right: 10px;
+}
+
+.assign-workflow-action {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px #000000;
+}
+
+.assign-workflow-cancel {
+    color: black;
+    background-color: white;
+    border-color: black;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px #000000;
 }
 
 .font-big  input{
   font-size: medium;
 }
+
+.assign-workflow-cancel:hover {
+    box-shadow: 1px 1px 4px #000000;
+    transform: translate3d(0px, -4px, 30px);
+}
+
+.assign-workflow-action:hover {
+    box-shadow: 1px 1px 4px #000000;
+    transform: translate3d(0px, -4px, 30px);
+  }
 
