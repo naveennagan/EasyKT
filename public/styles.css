@@ -939,6 +939,7 @@ header {
   align-items: center;
   padding: 5px 10%;
   background-color: #464eb8;
+  padding-left: 30px;
 }
 
 .logo {

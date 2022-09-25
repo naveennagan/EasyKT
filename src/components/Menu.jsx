@@ -75,6 +75,7 @@ export const Menu = () => {
           <img
             width="60px"
             height="60px"
+            right="10px"
             src="https://rocksolidpaintingco.com/wp-content/uploads/2019/10/Blank-avatar.png"
             alt="logo"
           />
