@@ -73,10 +73,12 @@ export const Menu = () => {
       <header>
         <a class="logo" href="/">
           <img
+            class="logo1"
             width="60px"
             height="60px"
             right="10px"
-            src="https://rocksolidpaintingco.com/wp-content/uploads/2019/10/Blank-avatar.png"
+            border-radius="50% !important"
+            src="https://bglaw.com/wp-content/uploads/2020/05/avatar-placeholder-550x550.png"
             alt="logo"
           />
         </a>

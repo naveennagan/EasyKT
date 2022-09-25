@@ -939,7 +939,7 @@ header {
   align-items: center;
   padding: 5px 10%;
   background-color: #464eb8;
-  padding-left: 30px;
+  padding-left: 40px;
 }
 
 .logo {
@@ -1070,4 +1070,8 @@ nav {
   .menu {
     display: initial;
   }
+}
+
+.logo1{
+  border-radius: 50%;
 }
