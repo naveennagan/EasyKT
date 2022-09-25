@@ -20,8 +20,9 @@ export const WorkflowItem = (props) => {
       <CustomModal
         style={{
           content: {
-            height: "300px",
-            width: "300px",
+            height: "400px",
+            width: "600px",
+           
             inset: "100px",
             padding: "0px",
             margin: "auto",
