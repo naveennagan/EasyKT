@@ -716,17 +716,12 @@ body {
   font-size: 20px;
 }
 
-
-
-.worflow-label {
-  margin: 10px;
-  font-size: 14px;
-}
-
 .select-user-picker {
-  margin: 10px;
-  cursor: pointer;
-  padding: 5px;
+    height: 30px;
+    margin: -4px 5px;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 14px;
 }
 
 .workflow-details {
@@ -807,11 +802,8 @@ body {
   transform: translate3d(0px, -4px, 30px);
 }
 .worflow-label {
-  margin: 10px;
-  font-size: 16px;
-  padding: 20px;
-  top: 100px;
-  font-weight: 400px;
+    margin: 30px 0px;
+    font-size: 16px;
 }
 
 .workflow-assignees {
