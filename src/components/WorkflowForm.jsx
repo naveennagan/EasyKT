@@ -80,11 +80,26 @@ export const WorkflowForm = (props) => {
               }}
             />
           </div>
+          <div className="mb-3 text-left">
+            Additional URLs
+            <input
+              type="url"
+              className="form-control"
+              value={formData.url || ""}
+              onChange={(e) => {
+                setFormData({ ...formData, url: e.target.value });
+              }}
+            />
+          </div>
         </>
       )}
 
       <div className="mt-5">
-        <button className="btn btn-primary m-3" onClick={onHide} title="close workflow">
+        <button
+          className="btn btn-primary m-3"
+          onClick={onHide}
+          title="close workflow"
+        >
           <i className="bi bi-x-lg m-4 font-size-large"></i>
         </button>
         <button

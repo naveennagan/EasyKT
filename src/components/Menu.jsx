@@ -70,7 +70,6 @@ export const Menu = () => {
   return (
     <div className="ek-menu p-3">
       <img
-        // class="logo1"
         width="30px"
         height="30px"
         right="10px"
