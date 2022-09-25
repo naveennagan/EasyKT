@@ -176,6 +176,7 @@ body {
   overflow: scroll;
   border: 1px solid #c7c9c9;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .create-workflow-button {
