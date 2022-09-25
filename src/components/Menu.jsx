@@ -68,20 +68,46 @@ export const Menu = () => {
   };
 
   return (
-    <div className="ek-menu justify-content-center p-3">
-      <input
-        className="input-lg search-rounded px-4"
-        type="text"
-        value={searchInput}
-        onChange={onInputChange}
-        onKeyUp={onEnterPress}
-        placeholder="Search for anything..."
-      />
-      <i
-        className="bi bi-search m-5 font-size-large"
-        onClick={onSearchClick}
-      ></i>
-      <i className="bi bi-x-lg font-size-large" onClick={onSearchClear}></i>
-    </div>
+    <>
+      <div className="justify-content-center "></div>
+      <header>
+        <a class="logo" href="/">
+          <img
+            width="60px"
+            height="60px"
+            src="https://rocksolidpaintingco.com/wp-content/uploads/2019/10/Blank-avatar.png"
+            alt="logo"
+          />
+        </a>
+
+        <nav>
+          <ul class="nav__links">
+            <li>
+              <a href="#">File</a>
+            </li>
+            <li>
+              <a href="#">Edit</a>
+            </li>
+            <li>
+              <a href="#">Menu</a>
+            </li>
+          </ul>
+        </nav>
+        <input
+          className="input-lg search-rounded px-4"
+          type="text"
+          value={searchInput}
+          onChange={onInputChange}
+          onKeyUp={onEnterPress}
+          placeholder="Search for anything..."
+        />
+        <i
+          className="bi bi-search m-5 font-size-large"
+          onClick={onSearchClick}
+        ></i>
+        <i className="bi bi-x-lg font-size-large" onClick={onSearchClear}></i>
+        <p class="menu cta">Menu</p>
+      </header>
+    </>
   );
 };
