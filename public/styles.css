@@ -722,11 +722,11 @@ body {
 }
 
 .select-user-picker {
-    height: 30px;
-    margin: -4px 5px;
-    cursor: pointer;
-    padding: 5px;
-    font-size: 14px;
+  height: 30px;
+  margin: -4px 5px;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 14px;
 }
 
 .workflow-details {
@@ -807,8 +807,8 @@ body {
   transform: translate3d(0px, -4px, 30px);
 }
 .worflow-label {
-    margin: 30px 0px;
-    font-size: 16px;
+  margin: 30px 0px;
+  font-size: 16px;
 }
 
 .workflow-assignees {
@@ -961,6 +961,7 @@ nav {
   color: #edf0f1;
   text-decoration: none;
   padding-right: 30px;
+  margin-left: -40px;
 }
 
 .nav__links {
