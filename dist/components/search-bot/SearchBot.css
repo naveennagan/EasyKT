@@ -1,0 +1,32 @@
+.search-bot {
+  font-size: medium;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.search-rounded {
+  border-radius: 100px;
+  font-size: large;
+  width: 50vw;
+  border: 2px solid #ccc;
+  color: white;
+  border: none;
+  background-color: #0303034f;
+}
+
+.search-rounded:hover {
+  background-color: white;
+  color: black;
+}
+
+.font-size-large {
+  font-size: large;
+  color: white;
+  cursor: pointer;
+}
+
+.pill-transtition {
+  transition: all 1s ease !important;
+}

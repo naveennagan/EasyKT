@@ -10,7 +10,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "init": "react-scripts install",
-    "dev": "nodemon ./server"
+    "dev": "nodemon ./server",
+    "webpackbuild": "webpack"
   },
   "repository": {
     "type": "git",
