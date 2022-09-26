@@ -76,7 +76,7 @@ export const Menu = () => {
         border-radius="50% !important"
         src="https://bglaw.com/wp-content/uploads/2020/05/avatar-placeholder-550x550.png"
         alt="logo"
-        style={{ float: "left", borderRadius: "50px", margin: "10px" }}
+        style={{ float: "right", borderRadius: "50px", margin: "10px" }}
       />
       <input
         className="input-lg search-rounded px-4"
@@ -93,7 +93,7 @@ export const Menu = () => {
       <i className="bi bi-x-lg font-size-large" onClick={onSearchClear}></i>
       <i
         className="bi bi-list font-size-large"
-        style={{ float: "right", margin: "15px", color: "white" }}
+        style={{ float: "left", margin: "15px", color: "white" }}
         onClick={onSearchClear}
       ></i>
     </div>

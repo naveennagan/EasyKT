@@ -16,9 +16,14 @@
   background-color: #0303034f;
 }
 
+.search-rounded:hover {
+  background-color: white;
+  color: black;
+}
+
 .font-size-large {
   font-size: large;
-  color: #030303;
+  color: white;
   cursor: pointer;
 }
 
